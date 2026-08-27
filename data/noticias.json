@@ -1,5 +1,5 @@
 {
-  "updated": "27 ago 2026 · 10:40 (BA)",
+  "updated": "27 ago 2026 · 15:10 (BA)",
   "sample": false,
   "items": [
     {
@@ -11,7 +11,8 @@
       "headline": "Entrevista completa a Yuval Noah Harari sobre IA, poder y democracia.",
       "source": "The Economist (YouTube)",
       "date": "2026-08-27",
-      "url": "https://www.youtube.com/watch?v=FNZhxTtOL-I"
+      "url": "https://www.youtube.com/watch?v=FNZhxTtOL-I",
+      "note": "Entrevista extensa y sin controversia — buen candidato para reseñar o republicar fragmentos en el blog."
     },
     {
       "author": "Yuval Noah Harari",
@@ -23,6 +24,29 @@
       "source": "BigGo Finance",
       "date": "2026-08-27",
       "url": "https://finance.biggo.com/news/d44d84c3e3d051bb"
+    },
+    {
+      "author": "Yuval Noah Harari",
+      "priority": "P0",
+      "institution": false,
+      "type": "Research",
+      "sentiment": "neutral",
+      "headline": "\"Accionistas de nuestra obsolescencia\": ensayo en español que retoma el argumento de Harari sobre el futuro del trabajo y el capital.",
+      "source": "Letras Libres",
+      "date": "2026-08-26",
+      "url": "https://letraslibres.com/ciencia-y-tecnologia/accionistas-de-nuestra-obsolescencia/26/08/2026/",
+      "note": "Ensayo en español, buen tono académico — candidato a compartir con UEES/Anáhuac."
+    },
+    {
+      "author": "Yuval Noah Harari",
+      "priority": "P0",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "neutral",
+      "headline": "The Economist repasa el acuerdo de Meta (~US$17.000M) por el juicio de adicción en redes, en la misma edición que perfila el análisis de Harari sobre los riesgos económicos y políticos de la IA.",
+      "source": "The Economist",
+      "date": "2026-08-26",
+      "url": "https://www.economist.com/business/2026/08/26/meta-settles-its-blockbuster-trial-for-up-to-17bn"
     },
     {
       "author": "Yuval Noah Harari",
@@ -44,7 +68,8 @@
       "headline": "Columna de opinión sobre el término \"Zionism\": cita a Harari como defensor del término pese a ser crítico del gobierno israelí actual. Tema políticamente sensible — sin acusación directa a Harari.",
       "source": "Jewish AZ",
       "date": "2026-08-25",
-      "url": "https://www.jewishaz.com/opinion/a-consultant-was-fired-for-telling-jewish-leaders-to-avoid-the-term-zionism-but-did/article_08eea3cf-ab20-4df2-97e4-dfa8554427be.html"
+      "url": "https://www.jewishaz.com/opinion/a-consultant-was-fired-for-telling-jewish-leaders-to-avoid-the-term-zionism-but-did/article_08eea3cf-ab20-4df2-97e4-dfa8554427be.html",
+      "note": "Tema políticamente sensible por asociación — no amerita nivel de riesgo, pero conviene monitorear el hilo."
     },
     {
       "author": "Patch Adams",
@@ -69,6 +94,17 @@
       "url": "https://noah-news.com/meta-faces-landmark-us-court-case-over-social-media-addiction-and-user-harm/"
     },
     {
+      "author": "Anna Lembke",
+      "priority": "P1",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "neutral",
+      "headline": "Masud Husain, neurólogo, en La Vanguardia: \"las redes sociales afectan al sistema de dopaminas igual que cualquier otra adicción\", citando el trabajo de Anna Lembke.",
+      "source": "La Vanguardia",
+      "date": "2026-08-27",
+      "url": "https://www.lavanguardia.com/clic/20260827/11620578/masud-husain-neurologo-redes-sociales-afectan-sistema-dopaminas-cuerpo-igual-otra-adiccion-epm.html"
+    },
+    {
       "author": "Russell Barkley",
       "priority": "P1",
       "institution": false,
@@ -80,6 +116,17 @@
       "url": "https://www.archynewsy.com/is-adhd-a-real-medical-condition-what-science-says-about-the-disorder/"
     },
     {
+      "author": "Russell Barkley",
+      "priority": "P1",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "positive",
+      "headline": "ADDitude Magazine cita a Russell A. Barkley como coautor de referencia en una nota sobre procrastinación y TDAH en adultos.",
+      "source": "ADDitude Magazine",
+      "date": "2026-08-27",
+      "url": "https://www.additudemag.com/how-to-stop-procrastination-tight-deadlines/"
+    },
+    {
       "author": "Ronald Siegel",
       "priority": "P1",
       "institution": false,
@@ -89,6 +136,29 @@
       "source": "Vanity Fair Italia",
       "date": "2026-08-22",
       "url": "https://www.vanityfair.it/article/libri-ansia-rientro-post-ferie-mindfulness"
+    },
+    {
+      "author": "Ronald Siegel",
+      "priority": "P1",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "positive",
+      "headline": "TN (Argentina) recomienda prácticas de mindfulness \"según Harvard\", citando a Ronald Siegel, profesor de la Facultad de Medicina de Harvard.",
+      "source": "TN.com.ar",
+      "date": "2026-08-27",
+      "url": "https://tn.com.ar/salud/noticias/2026/08/27/practicas-de-mindfulness-para-mejorar-la-concentracion-segun-harvard/",
+      "note": "Cobertura en medio masivo argentino — relevante para UEES."
+    },
+    {
+      "author": "Ronald Siegel",
+      "priority": "P1",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "positive",
+      "headline": "Revista Fórum (Brasil) reseña el artículo de Harvard Health sobre mindfulness escrito junto a Ronald D. Siegel.",
+      "source": "Revista Fórum",
+      "date": "2026-08-20",
+      "url": "https://revistaforum.com.br/saude/o-que-e-mindfulness/"
     },
     {
       "author": "Suzana Herculano-Houzel",
@@ -111,6 +181,18 @@
       "source": "MDPI (Religions)",
       "date": "2026-08-18",
       "url": "https://www.mdpi.com/2077-1444/17/8/981"
+    },
+    {
+      "author": "Jaime Troiano",
+      "priority": "P1",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "positive",
+      "headline": "Jaime Troiano anuncia en su columna de A Gazeta el lanzamiento de su nuevo libro sobre branding, previsto para el 29 de septiembre.",
+      "source": "A Gazeta",
+      "date": "2026-08-26",
+      "url": "https://www.agazeta.com.br/colunas/jaime-troiano/a-potencia-das-marcas-um-novo-pacto-0826",
+      "note": "Anuncio propio del autor, sin riesgo — buen candidato para republicar/comentar en el blog de NODS."
     }
   ]
 }

@@ -175,6 +175,7 @@
   .ncard:last-child{border-bottom:none}
   .ncard .r1{margin-bottom:4px}
   .ncard .hl{font-size:var(--fs-body); margin:2px 0 6px}
+  .ncard .anote{margin-top:var(--space-2)}
   .tags{display:flex; flex-wrap:wrap; gap:var(--space-2); align-items:center}
   .chip{font-size:var(--fs-caption); font-weight:var(--fw-medium); padding:2px 9px; border-radius:var(--radius-pill);
     border:1px solid var(--gray-200); color:var(--text-muted); text-transform:uppercase; letter-spacing:var(--tracking-caps)}
@@ -188,10 +189,37 @@
 
   footer{border-top:var(--border-hairline); margin-top:var(--space-7); padding:var(--space-5) 0;
     font-size:var(--fs-caption); color:var(--text-faint)}
-  footer .wrap{display:flex; flex-wrap:wrap; gap:var(--space-2) var(--space-5); justify-content:space-between; align-items:center}
+  footer .wrap{display:flex; flex-direction:column; gap:var(--space-4)}
+  footer .frow{display:flex; flex-wrap:wrap; gap:var(--space-2) var(--space-5); justify-content:space-between; align-items:center}
   footer .srcs{display:flex; gap:var(--space-2); align-items:center; flex-wrap:wrap}
   .schip{font-size:var(--fs-caption); padding:2px 9px; border-radius:var(--radius-pill);
     border:1px solid var(--gray-200); color:var(--text-muted)}
+
+  /* ===== Histórico — colapsado por defecto, no compite con la vista principal ===== */
+  .hist{border-top:var(--border-hairline); padding-top:var(--space-4)}
+  .hist summary{cursor:pointer; list-style:none; font-size:var(--fs-caption); font-weight:var(--fw-medium);
+    text-transform:uppercase; letter-spacing:var(--tracking-caps); color:var(--text-muted); display:flex;
+    align-items:center; gap:6px; user-select:none}
+  .hist summary::-webkit-details-marker{display:none}
+  .hist summary::before{content:"▸"; font-size:10px; color:var(--text-faint); transition:transform .15s}
+  .hist[open] summary::before{transform:rotate(90deg)}
+  .hist summary:hover{color:var(--text)}
+  .hist-body{padding:var(--space-4) 0 0}
+  .hist-empty{font-size:var(--fs-caption); color:var(--text-faint)}
+  .hist-list{display:flex; flex-direction:column; gap:0; border:var(--border-hairline); border-radius:var(--radius-card-sm); overflow:hidden}
+  .hist-row{display:flex; align-items:center; gap:var(--space-3); padding:10px var(--space-4);
+    border-bottom:var(--border-hairline); background:none; border-left:0; border-right:0; border-top:0;
+    font:inherit; font-size:var(--fs-body-sm); color:var(--text); cursor:pointer; width:100%; text-align:left}
+  .hist-row:last-child{border-bottom:none}
+  .hist-row:hover{background:var(--surface-muted)}
+  .hist-row .w{font-weight:var(--fw-medium)}
+  .hist-row .m{color:var(--text-muted); margin-left:auto; font-size:var(--fs-caption)}
+  .archive-banner{border:var(--border-hairline); border-left:3px solid var(--text-muted); border-radius:var(--radius-card-sm);
+    padding:var(--space-3) var(--space-4); margin-bottom:var(--space-5); background:var(--surface-muted);
+    font-size:var(--fs-body-sm); display:flex; gap:var(--space-3); align-items:center; flex-wrap:wrap}
+  .archive-banner[hidden]{display:none}
+  .archive-banner .lbl{color:var(--text-muted)}
+  .archive-banner .lbl b{color:var(--text)}
 
   @media (max-width:720px){
     .kpis{grid-template-columns:repeat(2,1fr)}
@@ -229,6 +257,11 @@
 
 <main class="wrap">
 
+  <div class="archive-banner" id="archive-banner" hidden>
+    <span class="lbl">Estás viendo el archivo de <b id="archive-week">—</b>, datos históricos de solo lectura.</span>
+    <button class="btn" id="archive-back">← Volver a la semana actual</button>
+  </div>
+
   <!-- ===== TAB 1: URGENCIAS ===== -->
   <section class="panel" id="panel-urg" role="tabpanel" aria-labelledby="tab-urg">
     <div class="callout" id="banner-urg" hidden><span class="i">i</span><span></span></div>
@@ -263,8 +296,14 @@
 
 <footer>
   <div class="wrap">
-    <div class="srcs"><span>Fuentes:</span><span class="schip">Google Alerts · 45</span><span class="schip">Talkwalker · 18</span></div>
-    <div>Global Minds Intelligence · Grupo NODS — se actualiza cada lunes</div>
+    <div class="frow">
+      <div class="srcs"><span>Fuentes:</span><span class="schip">Google Alerts · 63</span><span class="schip">Talkwalker · 18</span></div>
+      <div>Global Minds Intelligence · Grupo NODS — se actualiza cada lunes</div>
+    </div>
+    <details class="hist" id="hist">
+      <summary>Semanas anteriores</summary>
+      <div class="hist-body" id="hist-body"><p class="hist-empty">Cargando…</p></div>
+    </details>
   </div>
 </footer>
 
@@ -364,17 +403,57 @@ function applyFilters(){
       </div>
       <p class="hl">${esc(n.headline)}</p>
       <div class="src">${n.source?`<span><b>${esc(n.source)}</b></span><span class="sep">·</span>`:''}<span class="num">${fmtDate(n.date)}</span></div>
+      ${n.note?`<div class="anote"><b>Nota:</b> ${esc(n.note)}</div>`:''}
     </article>`).join('');
 }
 
 function showBanner(sel,msg){ const b=$(sel); b.hidden=false; b.querySelector('span:last-child').textContent=msg; }
 
-(async function(){
+async function loadCurrent(){
   const [urg, news] = await Promise.all([ loadJSON('./data/urgencias.json'), loadJSON('./data/noticias.json') ]);
   renderUrg(urg || {items:[]});
   renderNews(news || {items:[]});
   const u = (news&&news.updated) || (urg&&urg.updated);
   if(u && !(news&&news.sample) && !(urg&&urg.sample)) $('#updated').textContent = u;
+}
+
+function setArchiveMode(weekLabel){
+  const b = $('#archive-banner');
+  if(weekLabel){ b.hidden=false; $('#archive-week').textContent = weekLabel; }
+  else { b.hidden = true; }
+}
+$('#archive-back').onclick = ()=>{ setArchiveMode(null); loadCurrent(); };
+
+async function initHistory(){
+  const idx = await loadJSON('./data/history/index.json');
+  const weeks = (idx && idx.weeks) || [];
+  const body = $('#hist-body');
+  if(!weeks.length){
+    body.innerHTML = `<p class="hist-empty">Todavía no hay semanas archivadas — se van a ir guardando acá cada lunes, a partir de la próxima corrida.</p>`;
+    return;
+  }
+  const sorted = [...weeks].sort((a,b)=> new Date(b.date) - new Date(a.date));
+  body.innerHTML = `<div class="hist-list">${sorted.map((w,i)=>
+    `<button class="hist-row" data-i="${i}"><span class="w">${esc(w.label||w.date)}</span><span class="m">${esc((w.urgencias||0))} crítica${w.urgencias===1?'':'s'} · ${esc(w.noticias||0)} noticias</span></button>`
+  ).join('')}</div>`;
+  body.querySelectorAll('.hist-row').forEach(btn=>{
+    btn.onclick = async ()=>{
+      const w = sorted[Number(btn.dataset.i)];
+      const [urg, news] = await Promise.all([
+        loadJSON(`./data/history/${w.urgFile}`),
+        loadJSON(`./data/history/${w.newsFile}`)
+      ]);
+      renderUrg(urg || {items:[]});
+      renderNews(news || {items:[]});
+      setArchiveMode(w.label || w.date);
+      window.scrollTo({top:0, behavior:'smooth'});
+    };
+  });
+}
+
+(async function(){
+  await loadCurrent();
+  initHistory();
 })();
 </script>
 </body>
