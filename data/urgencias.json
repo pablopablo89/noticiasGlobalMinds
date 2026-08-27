@@ -1,20 +1,6 @@
 {
-  "week": "Semana de ejemplo",
-  "updated": "Pendiente — se reemplaza en la primera corrida",
-  "sample": true,
-  "items": [
-    {
-      "level": "rojo",
-      "score": 88,
-      "author": "Yuval Noah Harari",
-      "priority": "P0",
-      "vertical": "IA / Sociedad",
-      "headline": "Una declaración sobre IA y democracia se viraliza fuera de contexto y genera cruces con figuras políticas.",
-      "source": "Medio internacional",
-      "date": "2026-08-28",
-      "url": "#",
-      "why": "controversy · polémica + alto alcance",
-      "action": "Abrir fuente original, verificar cita/fecha, congelar reutilización hasta revisión de PR/Legal."
-    }
-  ]
+  "week": "Semana 20 – 27 ago 2026",
+  "updated": "27 ago 2026 · 10:21 (BA)",
+  "sample": false,
+  "items": []
 }

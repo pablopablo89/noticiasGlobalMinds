@@ -1,50 +1,5 @@
 {
-  "updated": "Pendiente — se reemplaza en la primera corrida",
-  "sample": true,
-  "items": [
-    {
-      "author": "Yuval Noah Harari",
-      "priority": "P0",
-      "institution": false,
-      "type": "Prensa",
-      "sentiment": "neutral",
-      "headline": "Nueva entrevista sobre IA, futuro del trabajo y el rol de las democracias.",
-      "source": "Infobae",
-      "date": "2026-08-27",
-      "url": "#"
-    },
-    {
-      "author": "Anna Lembke",
-      "priority": "P1",
-      "institution": false,
-      "type": "Prensa",
-      "sentiment": "positive",
-      "headline": "Reflexiones sobre dopamina y consumo digital en un podcast de gran alcance.",
-      "source": "Podcast de salud",
-      "date": "2026-08-26",
-      "url": "#"
-    },
-    {
-      "author": "Carlos Gadia",
-      "priority": "P1",
-      "institution": true,
-      "type": "Evento",
-      "sentiment": "positive",
-      "headline": "Conferencia sobre neurodesarrollo mencionando el programa de Neurociencia Aplicada de Anáhuac.",
-      "source": "Anáhuac México",
-      "date": "2026-08-25",
-      "url": "#"
-    },
-    {
-      "author": "Suzana Herculano-Houzel",
-      "priority": "P1",
-      "institution": false,
-      "type": "Research",
-      "sentiment": "neutral",
-      "headline": "Divulga una investigación sobre la cantidad de neuronas y el metabolismo cerebral.",
-      "source": "Revista científica",
-      "date": "2026-08-24",
-      "url": "#"
-    }
-  ]
+  "updated": "27 ago 2026 · 10:21 (BA)",
+  "sample": false,
+  "items": []
 }
