@@ -1,5 +1,116 @@
 {
-  "updated": "27 ago 2026 · 10:21 (BA)",
+  "updated": "27 ago 2026 · 10:40 (BA)",
   "sample": false,
-  "items": []
+  "items": [
+    {
+      "author": "Yuval Noah Harari",
+      "priority": "P0",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "neutral",
+      "headline": "Entrevista completa a Yuval Noah Harari sobre IA, poder y democracia.",
+      "source": "The Economist (YouTube)",
+      "date": "2026-08-27",
+      "url": "https://www.youtube.com/watch?v=FNZhxTtOL-I"
+    },
+    {
+      "author": "Yuval Noah Harari",
+      "priority": "P0",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "neutral",
+      "headline": "Harari sostiene que la IA producirá intimidad en masa y que hay hasta 2028 para fijar reglas.",
+      "source": "BigGo Finance",
+      "date": "2026-08-27",
+      "url": "https://finance.biggo.com/news/d44d84c3e3d051bb"
+    },
+    {
+      "author": "Yuval Noah Harari",
+      "priority": "P0",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "neutral",
+      "headline": "ONGs piden audiencia pública en el Senado; el debate cita el cuestionamiento de Harari en el Financial Times sobre otorgar personería jurídica a agentes de IA.",
+      "source": "Noticias Ambientales (Argentina)",
+      "date": "2026-08-25",
+      "url": "https://noticiasambientales.com/ong/corporaciones-sin-humanos-piden-al-senado-una-audiencia-publica-antes-de-tratar-la-ley-de-sociedades/"
+    },
+    {
+      "author": "Yuval Noah Harari",
+      "priority": "P0",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "neutral",
+      "headline": "Columna de opinión sobre el término \"Zionism\": cita a Harari como defensor del término pese a ser crítico del gobierno israelí actual. Tema políticamente sensible — sin acusación directa a Harari.",
+      "source": "Jewish AZ",
+      "date": "2026-08-25",
+      "url": "https://www.jewishaz.com/opinion/a-consultant-was-fired-for-telling-jewish-leaders-to-avoid-the-term-zionism-but-did/article_08eea3cf-ab20-4df2-97e4-dfa8554427be.html"
+    },
+    {
+      "author": "Patch Adams",
+      "priority": "P1",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "positive",
+      "headline": "Homenaje a un \"payaso de hospital\" italiano inspirado en la filosofía de Patch Adams sobre clown-terapia.",
+      "source": "Prima Treviglio (Italia)",
+      "date": "2026-08-26",
+      "url": "https://primatreviglio.it/cronaca/una-vita-in-corsia-col-naso-rosso-verdello-piange-il-clown-eolo/"
+    },
+    {
+      "author": "Anna Lembke",
+      "priority": "P1",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "neutral",
+      "headline": "Meta enfrenta un caso judicial histórico en EE.UU. por adicción a redes sociales; Lembke citada como experta en dopamina.",
+      "source": "Noah News",
+      "date": "2026-08-23",
+      "url": "https://noah-news.com/meta-faces-landmark-us-court-case-over-social-media-addiction-and-user-harm/"
+    },
+    {
+      "author": "Russell Barkley",
+      "priority": "P1",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "positive",
+      "headline": "\"¿Es el TDAH una condición médica real?\" — Barkley citado como la autoridad que respalda su legitimidad científica.",
+      "source": "Archy News",
+      "date": "2026-08-22",
+      "url": "https://www.archynewsy.com/is-adhd-a-real-medical-condition-what-science-says-about-the-disorder/"
+    },
+    {
+      "author": "Ronald Siegel",
+      "priority": "P1",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "positive",
+      "headline": "Recomiendan el libro de mindfulness de Ronald D. Siegel para gestionar la ansiedad post-vacaciones.",
+      "source": "Vanity Fair Italia",
+      "date": "2026-08-22",
+      "url": "https://www.vanityfair.it/article/libri-ansia-rientro-post-ferie-mindfulness"
+    },
+    {
+      "author": "Suzana Herculano-Houzel",
+      "priority": "P1",
+      "institution": false,
+      "type": "Evento",
+      "sentiment": "positive",
+      "headline": "Suzana Herculano-Houzel dicta un curso sobre el potencial del cerebro en CasaFolha.",
+      "source": "Folha de S.Paulo",
+      "date": "2026-08-19",
+      "url": "https://www1.folha.uol.com.br/ilustrada/2026/08/jeferson-tenorio-do-best-seller-o-avesso-da-pele-estreia-curso-de-escrita-na-casafolha.shtml"
+    },
+    {
+      "author": "Shauna Shapiro",
+      "priority": "P1",
+      "institution": false,
+      "type": "Research",
+      "sentiment": "neutral",
+      "headline": "Paper académico sobre mindfulness cita el trabajo de Shauna Shapiro en escalas de compasión.",
+      "source": "MDPI (Religions)",
+      "date": "2026-08-18",
+      "url": "https://www.mdpi.com/2077-1444/17/8/981"
+    }
+  ]
 }
