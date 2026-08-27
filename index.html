@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global Minds Intelligence — NODS</title>
+<meta name="description" content="Monitoreo de los 18 autores de Global Minds: urgencias reales y noticias. Grupo NODS.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E1F3D'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%231E5BE6' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%231E5BE6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --ground:#F4F6FB; --surface:#FFFFFF; --surface-2:#F8FAFD;
+    --ink:#0E1726; --muted:#5B6b82; --faint:#8A96A9;
+    --line:#E4EAF2; --line-2:#D4DCEA;
+    --navy:#0E1F3D; --blue:#1E5BE6; --blue-soft:#E8EEFD;
+    --rojo:#D2382C; --rojo-bg:#FBEBE9; --rojo-ink:#9A241B;
+    --naranja:#D0791E; --naranja-bg:#FBF1E4; --naranja-ink:#8A4E12;
+    --verde:#1C824C; --verde-bg:#E7F4ED;
+    --shadow:0 1px 2px rgba(14,31,61,.05), 0 8px 24px rgba(14,31,61,.06);
+    --radius:14px; --maxw:1100px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --ground:#0A1018; --surface:#111a26; --surface-2:#0D151F;
+      --ink:#E8EDF5; --muted:#9AA7BA; --faint:#697687;
+      --line:#213042; --line-2:#2C3E53;
+      --navy:#0B1626; --blue:#5C8DF0; --blue-soft:#152438;
+      --rojo:#E8695A; --rojo-bg:#2A1613; --rojo-ink:#F1A99E;
+      --naranja:#E6A052; --naranja-bg:#291D0F; --naranja-ink:#F0C48C;
+      --verde:#4CB27B; --verde-bg:#112319;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 28px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0A1018; --surface:#111a26; --surface-2:#0D151F;
+    --ink:#E8EDF5; --muted:#9AA7BA; --faint:#697687;
+    --line:#213042; --line-2:#2C3E53;
+    --navy:#0B1626; --blue:#5C8DF0; --blue-soft:#152438;
+    --rojo:#E8695A; --rojo-bg:#2A1613; --rojo-ink:#F1A99E;
+    --naranja:#E6A052; --naranja-bg:#291D0F; --naranja-ink:#F0C48C;
+    --verde:#4CB27B; --verde-bg:#112319;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 28px rgba(0,0,0,.4);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:var(--ground); color:var(--ink);
+    font-family:"Manrope",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    line-height:1.5; -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums}
+  a{color:inherit}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+
+  /* Top bar */
+  .top{background:var(--navy); color:#fff}
+  .top .wrap{display:flex; align-items:center; gap:16px; height:60px}
+  .logo{display:flex; align-items:center; gap:11px; font-weight:800; letter-spacing:-.01em}
+  .logo .mk{width:26px;height:26px;border-radius:7px;background:#fff;display:grid;place-items:center;flex:none}
+  .logo .mk svg{display:block}
+  .logo .t{font-size:15px; line-height:1}
+  .logo .t small{display:block; font-weight:500; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:#9db4d8; margin-top:3px}
+  .top .spring{flex:1}
+  .updated{font-size:12px; color:#9db4d8}
+  .updated b{color:#fff; font-weight:600}
+
+  /* Tabs */
+  .tabsbar{background:var(--surface); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:20}
+  .tabs{display:flex; gap:4px}
+  .tab{appearance:none; border:0; background:none; font:inherit; font-weight:600; font-size:14.5px; color:var(--muted);
+    padding:15px 16px 13px; cursor:pointer; border-bottom:2.5px solid transparent; display:flex; align-items:center; gap:8px}
+  .tab:hover{color:var(--ink)}
+  .tab[aria-selected="true"]{color:var(--ink); border-bottom-color:var(--blue)}
+  .tab .cnt{font-size:11px; font-weight:700; padding:1px 7px; border-radius:999px; background:var(--surface-2); border:1px solid var(--line); color:var(--muted)}
+  .tab.urg .cnt.hot{background:var(--rojo-bg); border-color:var(--rojo-bg); color:var(--rojo-ink)}
+
+  main{padding:26px 0 70px}
+  .panel[hidden]{display:none}
+
+  .banner{background:var(--blue-soft); border:1px solid var(--line); color:var(--ink); border-radius:12px;
+    padding:11px 15px; font-size:13px; margin-bottom:18px; display:flex; gap:9px; align-items:flex-start}
+  .banner .i{color:var(--blue); font-weight:700; flex:none}
+
+  /* KPIs */
+  .kpis{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:22px}
+  .tile{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:15px 16px; box-shadow:var(--shadow); position:relative; overflow:hidden}
+  .tile .strip{position:absolute; left:0;top:0;bottom:0;width:3px;background:var(--blue)}
+  .tile.rojo .strip{background:var(--rojo)} .tile.naranja .strip{background:var(--naranja)} .tile.aut .strip{background:var(--faint)}
+  .tile .n{font-size:32px;font-weight:800;line-height:1}
+  .tile.rojo .n{color:var(--rojo)} .tile.naranja .n{color:var(--naranja)}
+  .tile .l{font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-top:8px;font-weight:600}
+
+  .shead{display:flex;align-items:baseline;gap:12px;margin:0 0 14px}
+  .shead h2{font-size:13px;letter-spacing:.05em;text-transform:uppercase;margin:0;font-weight:700}
+  .shead .rule{flex:1;height:1px;background:var(--line)}
+  .shead .cnt{font-size:12px;color:var(--muted)}
+
+  .empty{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);
+    padding:34px 24px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:7px}
+  .empty .ring{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;background:var(--verde-bg);color:var(--verde);font-size:23px;margin-bottom:3px}
+  .empty h3{margin:0;font-size:17px;font-weight:700} .empty p{margin:0;color:var(--muted);font-size:13.5px;max-width:52ch}
+
+  /* Urgencia cards */
+  .feed{display:flex;flex-direction:column;gap:11px}
+  .ucard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);display:grid;grid-template-columns:5px 1fr;overflow:hidden}
+  .ucard .sev{background:var(--rojo)} .ucard.naranja .sev{background:var(--naranja)}
+  .ucard .b{padding:15px 17px}
+  .r1{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-bottom:7px}
+  .pill{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:3px 9px;border-radius:999px}
+  .pill.rojo{background:var(--rojo-bg);color:var(--rojo-ink)} .pill.naranja{background:var(--naranja-bg);color:var(--naranja-ink)}
+  .who{font-weight:700;font-size:15px} .ptag{font-size:10.5px;color:var(--muted);border:1px solid var(--line-2);padding:2px 7px;border-radius:6px;font-weight:600}
+  .score{margin-left:auto;font-size:12px;color:var(--muted)} .score b{color:var(--ink)}
+  .hl{font-size:15.5px;font-weight:500;line-height:1.34;margin:2px 0 6px}
+  .src{font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:5px 9px;align-items:center}
+  .src .sep{color:var(--line-2)}
+  .why{margin-top:10px;font-size:12.5px;background:var(--rojo-bg);color:var(--rojo-ink);padding:8px 11px;border-radius:9px;display:flex;gap:8px}
+  .ucard.naranja .why{background:var(--naranja-bg);color:var(--naranja-ink)}
+  .why .tag{font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:10px;white-space:nowrap;padding-top:1px}
+  .anote{margin-top:10px;font-size:12.5px;color:var(--muted)} .anote b{color:var(--ink);font-weight:600}
+  .acts{margin-top:12px;display:flex;flex-wrap:wrap;gap:8px}
+  .btn{font:inherit;font-size:12.5px;font-weight:600;text-decoration:none;padding:7px 13px;border-radius:9px;border:1px solid var(--line-2);color:var(--ink);background:var(--surface-2);display:inline-flex;gap:6px;align-items:center;cursor:pointer}
+  .btn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+  /* Noticias */
+  .filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;align-items:center}
+  .filters input,.filters select{font:inherit;font-size:13.5px;color:var(--ink);background:var(--surface);border:1px solid var(--line-2);border-radius:10px;padding:9px 12px}
+  .filters input{flex:1;min-width:180px}
+  .filters .grow{flex:1}
+  .nlist{display:flex;flex-direction:column;gap:10px}
+  .ncard{background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:13px 16px}
+  .ncard .r1{margin-bottom:5px}
+  .ncard .hl{font-size:14.5px;margin:1px 0 5px}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .chip{font-size:10.5px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);color:var(--muted)}
+  .chip.inst{background:var(--blue-soft);border-color:var(--blue-soft);color:var(--blue)}
+  .chip.p0{color:var(--rojo-ink);border-color:var(--rojo-bg);background:var(--rojo-bg)}
+  .dot-s{width:7px;height:7px;border-radius:50%;display:inline-block;flex:none}
+  .s-positive{background:var(--verde)} .s-neutral{background:var(--faint)} .s-negative{background:var(--rojo)}
+  .nlink{margin-left:auto;font-size:12px;color:var(--blue);font-weight:600;text-decoration:none;white-space:nowrap}
+
+  footer{border-top:1px solid var(--line);margin-top:26px;padding:18px 0;font-size:12px;color:var(--faint)}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:space-between;align-items:center}
+  footer .srcs{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .schip{font-size:11px;padding:3px 9px;border-radius:999px;background:var(--blue-soft);color:var(--blue);font-weight:600}
+
+  @media (max-width:720px){ .kpis{grid-template-columns:repeat(2,1fr)} .top .wrap{height:auto;padding:12px 20px;flex-wrap:wrap} .updated{width:100%} }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="logo">
+      <span class="mk"><svg width="16" height="16" viewBox="0 0 32 32"><circle cx="16" cy="16" r="9" fill="none" stroke="#0E1F3D" stroke-width="3"/><circle cx="16" cy="16" r="3" fill="#1E5BE6"/></svg></span>
+      <span class="t">Global Minds Intelligence <small>por Grupo NODS</small></span>
+    </div>
+    <span class="spring"></span>
+    <span class="updated">Actualizado: <b id="updated" class="mono">—</b></span>
+  </div>
+</header>
+
+<div class="tabsbar">
+  <div class="wrap">
+    <div class="tabs" role="tablist">
+      <button class="tab urg" id="tab-urg" role="tab" aria-selected="true" aria-controls="panel-urg">
+        🚨 Urgencias reales <span class="cnt" id="cnt-urg">0</span>
+      </button>
+      <button class="tab" id="tab-news" role="tab" aria-selected="false" aria-controls="panel-news">
+        📰 Noticias Global Minds <span class="cnt" id="cnt-news">0</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- ===== TAB 1: URGENCIAS ===== -->
+  <section class="panel" id="panel-urg" role="tabpanel" aria-labelledby="tab-urg">
+    <div class="banner" id="banner-urg" hidden><span class="i">i</span><span></span></div>
+    <div class="kpis">
+      <div class="tile"><span class="strip"></span><div class="n mono" id="k-total">0</div><div class="l">Señales críticas</div></div>
+      <div class="tile rojo"><span class="strip"></span><div class="n mono" id="k-rojo">0</div><div class="l">🔴 Rojo · 80-100</div></div>
+      <div class="tile naranja"><span class="strip"></span><div class="n mono" id="k-naranja">0</div><div class="l">🟠 Naranja · 60-79</div></div>
+      <div class="tile aut"><span class="strip"></span><div class="n mono" id="k-aut">0</div><div class="l">Autores afectados</div></div>
+    </div>
+    <div class="shead"><h2>Requieren decisión esta semana</h2><span class="rule"></span><span class="cnt mono" id="urg-count">0 críticas</span></div>
+    <div class="feed" id="urg-feed"></div>
+  </section>
+
+  <!-- ===== TAB 2: NOTICIAS ===== -->
+  <section class="panel" id="panel-news" role="tabpanel" aria-labelledby="tab-news" hidden>
+    <div class="banner" id="banner-news" hidden><span class="i">i</span><span></span></div>
+    <div class="filters">
+      <input id="q" type="search" placeholder="Buscar por titular, fuente o autor…" aria-label="Buscar">
+      <select id="f-author" aria-label="Filtrar por autor"><option value="">Todos los autores</option></select>
+      <select id="f-type" aria-label="Filtrar por tipo">
+        <option value="">Todo tipo</option><option>Prensa</option><option>Social</option><option>Research</option><option>Evento</option>
+      </select>
+      <select id="f-inst" aria-label="Filtrar institucional">
+        <option value="">Todas</option><option value="1">Solo institucionales</option>
+      </select>
+    </div>
+    <div class="shead"><h2>Todas las menciones de los 18 autores</h2><span class="rule"></span><span class="cnt mono" id="news-count">0</span></div>
+    <div class="nlist" id="news-list"></div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="srcs"><span>Fuentes:</span><span class="schip">Google Alerts · 45</span><span class="schip">Talkwalker · 18</span></div>
+    <div>Global Minds Intelligence · Grupo NODS — se actualiza cada lunes</div>
+  </div>
+</footer>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s==null?'':s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmtDate = d => { if(!d) return ''; const t=new Date(d); return isNaN(t)? esc(d) : t.toLocaleDateString('es-AR',{day:'2-digit',month:'short'}); };
+
+/* Tabs */
+function selectTab(which){
+  const urg = which==='urg';
+  $('#tab-urg').setAttribute('aria-selected', urg);
+  $('#tab-news').setAttribute('aria-selected', !urg);
+  $('#panel-urg').hidden = !urg;
+  $('#panel-news').hidden = urg;
+}
+$('#tab-urg').onclick = ()=>selectTab('urg');
+$('#tab-news').onclick = ()=>selectTab('news');
+
+async function loadJSON(path){
+  try{ const r = await fetch(path, {cache:'no-store'}); if(!r.ok) throw 0; return await r.json(); }
+  catch(e){ return null; }
+}
+
+/* ---------- URGENCIAS ---------- */
+function renderUrg(data){
+  const items = (data && data.items) || [];
+  const rojo = items.filter(i=>i.level==='rojo').length;
+  const naranja = items.filter(i=>i.level==='naranja').length;
+  const autores = new Set(items.map(i=>i.author)).size;
+  $('#k-total').textContent = items.length;
+  $('#k-rojo').textContent = rojo;
+  $('#k-naranja').textContent = naranja;
+  $('#k-aut').textContent = autores;
+  const cntEl = $('#cnt-urg'); cntEl.textContent = items.length; cntEl.classList.toggle('hot', items.length>0);
+  $('#urg-count').textContent = items.length + (items.length===1?' crítica':' críticas');
+
+  if(data && data.sample) showBanner('#banner-urg','Datos de ejemplo — se reemplazan automáticamente en la primera corrida del lunes.');
+  else if(data && data.updated) $('#updated').textContent = data.updated;
+
+  const feed = $('#urg-feed');
+  if(!items.length){
+    feed.innerHTML = `<div class="empty"><div class="ring">✓</div><h3>Sin señales críticas esta semana</h3>
+      <p>No se detectaron controversias, litigios ni riesgos reputacionales. El sistema sigue vigilando; lo neutral/positivo está en la pestaña de Noticias.</p></div>`;
+    return;
+  }
+  const order = {rojo:0, naranja:1};
+  items.sort((a,b)=> (order[a.level]-order[b.level]) || (b.score||0)-(a.score||0));
+  feed.innerHTML = items.map(i=>{
+    const nar = i.level==='naranja';
+    return `<article class="ucard ${nar?'naranja':''}"><div class="sev"></div><div class="b">
+      <div class="r1">
+        <span class="pill ${nar?'naranja':'rojo'}">${nar?'Naranja':'Rojo'}</span>
+        <span class="who">${esc(i.author)}</span>
+        ${i.priority?`<span class="ptag">${esc(i.priority)}${i.vertical?' · '+esc(i.vertical):''}</span>`:''}
+        ${i.score!=null?`<span class="score">Score <b class="mono">${esc(i.score)}</b></span>`:''}
+      </div>
+      <p class="hl">${esc(i.headline)}</p>
+      <div class="src">${i.source?`<span>Fuente: <b>${esc(i.source)}</b></span><span class="sep">·</span>`:''}<span class="mono">${fmtDate(i.date)}</span></div>
+      ${i.why?`<div class="why"><span class="tag">Por qué</span><span>${esc(i.why)}</span></div>`:''}
+      ${i.action?`<div class="anote"><b>Acción sugerida:</b> ${esc(i.action)}</div>`:''}
+      <div class="acts">${i.url&&i.url!=='#'?`<a class="btn primary" href="${esc(i.url)}" target="_blank" rel="noopener">Abrir fuente ↗</a>`:''}</div>
+    </div></article>`;
+  }).join('');
+}
+
+/* ---------- NOTICIAS ---------- */
+let NEWS = [];
+function renderNews(data){
+  NEWS = (data && data.items) || [];
+  $('#cnt-news').textContent = NEWS.length;
+  if(data && data.sample) showBanner('#banner-news','Datos de ejemplo — se reemplazan automáticamente en la primera corrida del lunes.');
+  const sel = $('#f-author');
+  [...new Set(NEWS.map(n=>n.author))].sort().forEach(a=>{ const o=document.createElement('option'); o.value=a; o.textContent=a; sel.appendChild(o); });
+  ['#q','#f-author','#f-type','#f-inst'].forEach(s=>$(s).addEventListener('input', applyFilters));
+  applyFilters();
+}
+function applyFilters(){
+  const q = $('#q').value.trim().toLowerCase();
+  const fa = $('#f-author').value, ft = $('#f-type').value, fi = $('#f-inst').value;
+  let rows = NEWS.filter(n=>{
+    if(fa && n.author!==fa) return false;
+    if(ft && n.type!==ft) return false;
+    if(fi==='1' && !n.institution) return false;
+    if(q){ const blob=(n.headline+' '+n.source+' '+n.author).toLowerCase(); if(!blob.includes(q)) return false; }
+    return true;
+  });
+  rows.sort((a,b)=> new Date(b.date)-new Date(a.date));
+  $('#news-count').textContent = rows.length + ' de ' + NEWS.length;
+  const list = $('#news-list');
+  if(!rows.length){ list.innerHTML = `<div class="empty"><div class="ring">📭</div><h3>Sin noticias que coincidan</h3><p>Ajustá los filtros o esperá a la próxima corrida semanal.</p></div>`; return; }
+  list.innerHTML = rows.map(n=>`<article class="ncard">
+      <div class="r1 tags">
+        <span class="dot-s s-${esc(n.sentiment||'neutral')}" title="${esc(n.sentiment||'neutral')}"></span>
+        <span class="who" style="font-size:14px">${esc(n.author)}</span>
+        ${n.priority?`<span class="chip ${n.priority==='P0'?'p0':''}">${esc(n.priority)}</span>`:''}
+        ${n.type?`<span class="chip">${esc(n.type)}</span>`:''}
+        ${n.institution?`<span class="chip inst">Institucional</span>`:''}
+        ${n.url&&n.url!=='#'?`<a class="nlink" href="${esc(n.url)}" target="_blank" rel="noopener">Abrir ↗</a>`:''}
+      </div>
+      <p class="hl">${esc(n.headline)}</p>
+      <div class="src">${n.source?`<span><b>${esc(n.source)}</b></span><span class="sep">·</span>`:''}<span class="mono">${fmtDate(n.date)}</span></div>
+    </article>`).join('');
+}
+
+function showBanner(sel,msg){ const b=$(sel); b.hidden=false; b.querySelector('span:last-child').textContent=msg; }
+
+(async function(){
+  const [urg, news] = await Promise.all([ loadJSON('./data/urgencias.json'), loadJSON('./data/noticias.json') ]);
+  renderUrg(urg || {items:[]});
+  renderNews(news || {items:[]});
+  const u = (news&&news.updated) || (urg&&urg.updated);
+  if(u && !(news&&news.sample) && !(urg&&urg.sample)) $('#updated').textContent = u;
+})();
+</script>
+</body>
+</html>
