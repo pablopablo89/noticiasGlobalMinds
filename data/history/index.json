@@ -1,3 +1,10 @@
 {
-  "weeks": []
+  "weeks": [
+    {
+      "date": "2026-08-27",
+      "label": "Corrida del 27 de agosto",
+      "newsFile": "2026-08-27-noticias.json",
+      "noticias": 17
+    }
+  ]
 }
