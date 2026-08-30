@@ -204,6 +204,18 @@
   .hist-row:hover{background:var(--surface-muted)}
   .hist-row .w{font-weight:var(--fw-medium)}
   .hist-row .m{color:var(--text-muted); margin-left:auto; font-size:var(--fs-caption)}
+  .urg-old{margin-top:var(--space-5)}
+  .urg-old[hidden]{display:none}
+  .urg-old summary{cursor:pointer; list-style:none; font-size:var(--fs-body-sm); font-weight:var(--fw-medium);
+    color:var(--text-muted); display:flex; align-items:center; gap:8px; user-select:none;
+    padding:var(--space-3) 0; border-top:var(--border-hairline)}
+  .urg-old summary::-webkit-details-marker{display:none}
+  .urg-old summary::before{content:"▸"; font-size:10px; color:var(--text-faint); transition:transform .15s}
+  .urg-old[open] summary::before{transform:rotate(90deg)}
+  .urg-old summary:hover{color:var(--text)}
+  .urg-old .feed{padding-top:var(--space-3)}
+  .urg-old .ucard{opacity:.72}
+  .urg-old .ucard:hover{opacity:1}
   #hist-week-view[hidden]{display:none}
   .hist-back{margin-bottom:var(--space-5)}
 
@@ -257,6 +269,10 @@
     </div>
     <div class="shead"><h2>Requieren decisión</h2><span class="rule"></span><span class="cnt num" id="urg-count">0 críticas</span></div>
     <div class="feed" id="urg-feed"></div>
+    <details class="urg-old" id="urg-old" hidden>
+      <summary><span id="urg-old-label">Anteriores</span></summary>
+      <div class="feed" id="urg-old-feed"></div>
+    </details>
   </section>
 
   <!-- ===== TAB 2: NOTICIAS ===== -->
@@ -321,33 +337,9 @@ async function loadJSON(path){
   catch(e){ return null; }
 }
 
-function renderUrg(data){
-  const items = (data && data.items) || [];
-  const rojo = items.filter(i=>i.level==='rojo').length;
-  const naranja = items.filter(i=>i.level==='naranja').length;
-  const autores = new Set(items.map(i=>i.author)).size;
-  $('#k-total').textContent = items.length;
-  $('#k-rojo').textContent = rojo;
-  $('#k-naranja').textContent = naranja;
-  $('#k-aut').textContent = autores;
-  const cntEl = $('#cnt-urg'); cntEl.textContent = items.length; cntEl.classList.toggle('hot', items.length>0);
-  $('#urg-count').textContent = items.length + (items.length===1?' crítica':' críticas');
-
-  if(data && data.sample) showBanner('#banner-urg','Datos de ejemplo — se reemplazan automáticamente en la primera corrida del lunes.');
-  else if(data && data.updated) $('#updated').textContent = data.updated;
-
-  const feed = $('#urg-feed');
-  if(!items.length){
-    feed.innerHTML = `<div class="empty"><div class="ring">✓</div><h3>Sin señales críticas esta semana</h3>
-      <p>No se detectaron controversias, litigios ni riesgos reputacionales. El sistema sigue vigilando; lo neutral/positivo está en la pestaña de Noticias.</p></div>`;
-    return;
-  }
-  const order = {rojo:0, naranja:1};
-  // Más nuevas arriba, más viejas abajo — las críticas se acumulan, nunca se archivan.
-  items.sort((a,b)=> (new Date(b.date)-new Date(a.date)) || (order[a.level]-order[b.level]) || (b.score||0)-(a.score||0));
-  feed.innerHTML = items.map(i=>{
-    const warn = i.level==='naranja';
-    return `<article class="ucard ${warn?'warn':''}">
+function urgCardHTML(i){
+  const warn = i.level==='naranja';
+  return `<article class="ucard ${warn?'warn':''}">
       <div class="r1">
         <span class="pill ${warn?'warn':'bad'}">${warn?'Naranja':'Rojo'}</span>
         <span class="who">${esc(i.author)}</span>
@@ -360,7 +352,53 @@ function renderUrg(data){
       ${i.action?`<div class="anote"><b>Acción sugerida:</b> ${esc(i.action)}</div>`:''}
       <div class="acts">${i.url&&i.url!=='#'?`<a class="btn primary" href="${esc(i.url)}" target="_blank" rel="noopener">Abrir fuente ↗</a>`:''}</div>
     </article>`;
-  }).join('');
+}
+
+function renderUrg(data){
+  const items = ((data && data.items) || []).slice();
+  const rojo = items.filter(i=>i.level==='rojo').length;
+  const naranja = items.filter(i=>i.level==='naranja').length;
+  const autores = new Set(items.map(i=>i.author)).size;
+  $('#k-total').textContent = items.length;
+  $('#k-rojo').textContent = rojo;
+  $('#k-naranja').textContent = naranja;
+  $('#k-aut').textContent = autores;
+  const cntEl = $('#cnt-urg'); cntEl.textContent = items.length; cntEl.classList.toggle('hot', items.length>0);
+
+  if(data && data.sample) showBanner('#banner-urg','Datos de ejemplo — se reemplazan automáticamente en la primera corrida.');
+  else if(data && data.updated) $('#updated').textContent = data.updated;
+
+  const feed = $('#urg-feed'), old = $('#urg-old'), oldFeed = $('#urg-old-feed');
+  if(!items.length){
+    $('#urg-count').textContent = '0 críticas';
+    old.hidden = true;
+    feed.innerHTML = `<div class="empty"><div class="ring">✓</div><h3>Sin señales críticas</h3>
+      <p>No se detectaron controversias, litigios ni riesgos reputacionales. El sistema sigue vigilando; lo neutral/positivo está en la pestaña de Noticias.</p></div>`;
+    return;
+  }
+
+  // Las críticas se acumulan y nunca se archivan: las más nuevas arriba.
+  const order = {rojo:0, naranja:1};
+  items.sort((a,b)=> (new Date(b.date)-new Date(a.date)) || (order[a.level]-order[b.level]) || (b.score||0)-(a.score||0));
+
+  // "Recientes" = dentro de los 7 días de la crítica más nueva. El resto se colapsa solo.
+  const ref = new Date(items[0].date);
+  const corte = new Date(ref); corte.setDate(corte.getDate() - 7);
+  const recientes = items.filter(i => new Date(i.date) >= corte);
+  const anteriores = items.filter(i => new Date(i.date) < corte);
+
+  $('#urg-count').textContent = recientes.length + (recientes.length===1?' crítica':' críticas');
+  feed.innerHTML = recientes.map(urgCardHTML).join('');
+
+  if(anteriores.length){
+    old.hidden = false;
+    $('#urg-old-label').textContent = 'Anteriores (' + anteriores.length + ')';
+    oldFeed.innerHTML = anteriores.map(urgCardHTML).join('');
+  } else {
+    old.hidden = true;
+    oldFeed.innerHTML = '';
+  }
+}
 }
 
 function newsCardsHTML(rows){
