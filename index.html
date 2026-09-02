@@ -204,18 +204,11 @@
   .hist-row:hover{background:var(--surface-muted)}
   .hist-row .w{font-weight:var(--fw-medium)}
   .hist-row .m{color:var(--text-muted); margin-left:auto; font-size:var(--fs-caption)}
-  .urg-old{margin-top:var(--space-5)}
-  .urg-old[hidden]{display:none}
-  .urg-old summary{cursor:pointer; list-style:none; font-size:var(--fs-body-sm); font-weight:var(--fw-medium);
-    color:var(--text-muted); display:flex; align-items:center; gap:8px; user-select:none;
-    padding:var(--space-3) 0; border-top:var(--border-hairline)}
-  .urg-old summary::-webkit-details-marker{display:none}
-  .urg-old summary::before{content:"▸"; font-size:10px; color:var(--text-faint); transition:transform .15s}
-  .urg-old[open] summary::before{transform:rotate(90deg)}
-  .urg-old summary:hover{color:var(--text)}
-  .urg-old .feed{padding-top:var(--space-3)}
-  .urg-old .ucard{opacity:.72}
-  .urg-old .ucard:hover{opacity:1}
+  .weekchip{display:inline-flex; align-items:center; gap:8px; font-size:var(--fs-body-sm);
+    color:var(--text-muted); border:var(--border-hairline); border-radius:var(--radius-pill);
+    padding:5px var(--space-4); margin-bottom:var(--space-5)}
+  .weekchip b{color:var(--text); font-weight:var(--fw-medium)}
+  .hist-sub{font-size:var(--fs-body-sm); color:var(--text-muted); margin:0 0 var(--space-5)}
   #hist-week-view[hidden]{display:none}
   .hist-back{margin-bottom:var(--space-5)}
 
@@ -261,6 +254,7 @@
   <!-- ===== TAB 1: URGENCIAS ===== -->
   <section class="panel" id="panel-urg" role="tabpanel" aria-labelledby="tab-urg">
     <div class="callout" id="banner-urg" hidden><span class="i">i</span><span></span></div>
+    <div class="weekchip" id="week-urg">Semana <b>—</b></div>
     <div class="kpis">
       <div class="card"><span class="label">Señales críticas</span><span class="value num" id="k-total">0</span></div>
       <div class="card"><span class="label">Rojo · 80–100</span><span class="value bad num" id="k-rojo">0</span></div>
@@ -269,15 +263,12 @@
     </div>
     <div class="shead"><h2>Requieren decisión</h2><span class="rule"></span><span class="cnt num" id="urg-count">0 críticas</span></div>
     <div class="feed" id="urg-feed"></div>
-    <details class="urg-old" id="urg-old" hidden>
-      <summary><span id="urg-old-label">Anteriores</span></summary>
-      <div class="feed" id="urg-old-feed"></div>
-    </details>
   </section>
 
   <!-- ===== TAB 2: NOTICIAS ===== -->
   <section class="panel" id="panel-news" role="tabpanel" aria-labelledby="tab-news" hidden>
     <div class="callout" id="banner-news" hidden><span class="i">i</span><span></span></div>
+    <div class="weekchip" id="week-news">Semana <b>—</b></div>
     <div class="filters">
       <input id="q" type="search" placeholder="Buscar por titular, fuente o autor…" aria-label="Buscar">
       <select id="f-author" aria-label="Filtrar por autor"><option value="">Todos los autores</option></select>
@@ -297,13 +288,14 @@
     <div id="hist-weeks">
       <div class="shead"><h2>Semanas archivadas</h2><span class="rule"></span></div>
       <p style="color:var(--text-muted); font-size:var(--fs-body-sm); margin:0 0 var(--space-5)">
-        Solo se archivan las noticias — las señales críticas nunca se archivan, quedan siempre visibles en «Urgencias reales».
+        Cada semana va de sábado a viernes y se cierra el lunes siguiente, después de que salió el reporte. Incluye las señales críticas y las noticias de ese período.
       </p>
       <div id="hist-list-wrap"><p class="hist-empty">Cargando…</p></div>
     </div>
     <div id="hist-week-view" hidden>
       <button class="btn hist-back" id="hist-back">← Volver al listado</button>
       <div class="shead"><h2 id="hist-week-title">—</h2><span class="rule"></span><span class="cnt num" id="hist-week-count">0</span></div>
+      <div class="feed" id="hist-urg-list" style="margin-bottom:var(--space-6)"></div>
       <div class="table-wrap"><div class="nlist" id="hist-news-list"></div></div>
     </div>
   </section>
@@ -358,46 +350,26 @@ function renderUrg(data){
   const items = ((data && data.items) || []).slice();
   const rojo = items.filter(i=>i.level==='rojo').length;
   const naranja = items.filter(i=>i.level==='naranja').length;
-  const autores = new Set(items.map(i=>i.author)).size;
   $('#k-total').textContent = items.length;
   $('#k-rojo').textContent = rojo;
   $('#k-naranja').textContent = naranja;
-  $('#k-aut').textContent = autores;
+  $('#k-aut').textContent = new Set(items.map(i=>i.author)).size;
   const cntEl = $('#cnt-urg'); cntEl.textContent = items.length; cntEl.classList.toggle('hot', items.length>0);
+  $('#urg-count').textContent = items.length + (items.length===1?' crítica':' críticas');
+  if(data && data.week) $('#week-urg').innerHTML = 'Semana <b>' + esc(data.week.label) + '</b>';
 
   if(data && data.sample) showBanner('#banner-urg','Datos de ejemplo — se reemplazan automáticamente en la primera corrida.');
   else if(data && data.updated) $('#updated').textContent = data.updated;
 
-  const feed = $('#urg-feed'), old = $('#urg-old'), oldFeed = $('#urg-old-feed');
+  const feed = $('#urg-feed');
   if(!items.length){
-    $('#urg-count').textContent = '0 críticas';
-    old.hidden = true;
-    feed.innerHTML = `<div class="empty"><div class="ring">✓</div><h3>Sin señales críticas</h3>
+    feed.innerHTML = `<div class="empty"><div class="ring">✓</div><h3>Sin señales críticas esta semana</h3>
       <p>No se detectaron controversias, litigios ni riesgos reputacionales. El sistema sigue vigilando; lo neutral/positivo está en la pestaña de Noticias.</p></div>`;
     return;
   }
-
-  // Las críticas se acumulan y nunca se archivan: las más nuevas arriba.
   const order = {rojo:0, naranja:1};
   items.sort((a,b)=> (new Date(b.date)-new Date(a.date)) || (order[a.level]-order[b.level]) || (b.score||0)-(a.score||0));
-
-  // "Recientes" = dentro de los 7 días de la crítica más nueva. El resto se colapsa solo.
-  const ref = new Date(items[0].date);
-  const corte = new Date(ref); corte.setDate(corte.getDate() - 7);
-  const recientes = items.filter(i => new Date(i.date) >= corte);
-  const anteriores = items.filter(i => new Date(i.date) < corte);
-
-  $('#urg-count').textContent = recientes.length + (recientes.length===1?' crítica':' críticas');
-  feed.innerHTML = recientes.map(urgCardHTML).join('');
-
-  if(anteriores.length){
-    old.hidden = false;
-    $('#urg-old-label').textContent = 'Anteriores (' + anteriores.length + ')';
-    oldFeed.innerHTML = anteriores.map(urgCardHTML).join('');
-  } else {
-    old.hidden = true;
-    oldFeed.innerHTML = '';
-  }
+  feed.innerHTML = items.map(urgCardHTML).join('');
 }
 
 function newsCardsHTML(rows){
@@ -422,6 +394,7 @@ function renderNews(data){
   NEWS = (data && data.items) || [];
   $('#cnt-news').textContent = NEWS.length;
   if(data && data.sample) showBanner('#banner-news','Datos de ejemplo — se reemplazan automáticamente en la primera corrida.');
+  if(data && data.week) $('#week-news').innerHTML = 'Semana <b>' + esc(data.week.label) + '</b>';
   const sel = $('#f-author');
   sel.querySelectorAll('option:not(:first-child)').forEach(o=>o.remove());
   [...new Set(NEWS.map(n=>n.author))].sort().forEach(a=>{ const o=document.createElement('option'); o.value=a; o.textContent=a; sel.appendChild(o); });
@@ -455,23 +428,27 @@ async function loadCurrent(){
 
 async function initHistory(){
   const idx = await loadJSON('./data/history/index.json');
-  const weeks = ((idx && idx.weeks) || []).slice().sort((a,b)=> new Date(b.date) - new Date(a.date));
+  const weeks = ((idx && idx.weeks) || []).slice().sort((a,b)=> new Date(b.start) - new Date(a.start));
   $('#cnt-hist').textContent = weeks.length;
   const wrap = $('#hist-list-wrap');
   if(!weeks.length){
-    wrap.innerHTML = `<p class="hist-empty">Todavía no hay semanas archivadas — se van guardando acá cada corrida (lunes, miércoles y viernes), a partir de la próxima.</p>`;
+    wrap.innerHTML = `<p class="hist-empty">Todavía no hay semanas archivadas. Cada semana se cierra el lunes, después de que salió el reporte del viernes.</p>`;
     return;
   }
   wrap.innerHTML = `<div class="hist-list">${weeks.map((w,i)=>
-    `<button class="hist-row" data-i="${i}"><span class="w">${esc(w.label||w.date)}</span><span class="m">${esc(w.noticias||0)} noticia${w.noticias===1?'':'s'}</span></button>`
+    `<button class="hist-row" data-i="${i}"><span class="w">${esc(w.label)}</span><span class="m">${esc(w.urgencias||0)} crítica${w.urgencias===1?'':'s'} · ${esc(w.noticias||0)} noticias</span></button>`
   ).join('')}</div>`;
   wrap.querySelectorAll('.hist-row').forEach(btn=>{
     btn.onclick = async ()=>{
       const w = weeks[Number(btn.dataset.i)];
-      const news = await loadJSON(`./data/history/${w.newsFile}`);
-      const rows = ((news && news.items) || []).slice().sort((a,b)=> new Date(b.date)-new Date(a.date));
-      $('#hist-week-title').textContent = w.label || w.date;
-      $('#hist-week-count').textContent = rows.length + (rows.length===1?' noticia':' noticias');
+      const data = await loadJSON(`./data/history/${w.file}`);
+      const urg = ((data && data.urgencias) || []).slice();
+      const rows = ((data && data.noticias) || []).slice().sort((a,b)=> new Date(b.date)-new Date(a.date));
+      const order = {rojo:0, naranja:1};
+      urg.sort((a,b)=> (new Date(b.date)-new Date(a.date)) || (order[a.level]-order[b.level]));
+      $('#hist-week-title').textContent = w.label;
+      $('#hist-week-count').textContent = urg.length + ' crítica' + (urg.length===1?'':'s') + ' · ' + rows.length + ' noticias';
+      $('#hist-urg-list').innerHTML = urg.length ? urg.map(urgCardHTML).join('') : '';
       $('#hist-news-list').innerHTML = newsCardsHTML(rows);
       $('#hist-weeks').hidden = true;
       $('#hist-week-view').hidden = false;

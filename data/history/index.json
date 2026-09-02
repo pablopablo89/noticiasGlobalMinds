@@ -1,22 +1,12 @@
 {
   "weeks": [
     {
-      "date": "2026-08-31",
-      "label": "Corrida del 31 de agosto",
-      "newsFile": "2026-08-31-noticias.json",
-      "noticias": 11
-    },
-    {
-      "date": "2026-08-28",
-      "label": "Corrida del 28 de agosto",
-      "newsFile": "2026-08-28-noticias.json",
-      "noticias": 12
-    },
-    {
-      "date": "2026-08-27",
-      "label": "Corrida del 27 de agosto",
-      "newsFile": "2026-08-27-noticias.json",
-      "noticias": 17
+      "start": "2026-08-22",
+      "end": "2026-08-28",
+      "label": "Del 22 al 28 de agosto",
+      "file": "2026-08-22_2026-08-28.json",
+      "urgencias": 2,
+      "noticias": 28
     }
   ]
 }

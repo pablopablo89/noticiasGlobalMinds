@@ -1,7 +1,36 @@
 {
-  "updated": "27 ago 2026 · 15:10 (BA)",
-  "sample": false,
-  "items": [
+  "start": "2026-08-22",
+  "end": "2026-08-28",
+  "label": "Del 22 al 28 de agosto",
+  "urgencias": [
+    {
+      "level": "rojo",
+      "score": 85,
+      "author": "Marcial Maciel",
+      "priority": "P1",
+      "vertical": "Institucional",
+      "headline": "Columna de opinión en Página 24 (México) lo señala como \"el más grande depredador\" y cuestiona que no se haya cerrado la Legión de Cristo.",
+      "source": "Página 24 (México)",
+      "date": "2026-08-25",
+      "url": "https://pagina24.com.mx/2026/08/25/plaza-de-armas/plaza-de-armas-3582/",
+      "why": "depredador · víctimas · reparación del daño — acusación directa en prensa mexicana, con mención explícita a la congregación vinculada a Anáhuac.",
+      "action": "Monitorear si escala a medios de mayor alcance. Tener lista una posición institucional por si un periodista consulta a Anáhuac."
+    },
+    {
+      "level": "naranja",
+      "score": 68,
+      "author": "Marcial Maciel",
+      "priority": "P1",
+      "vertical": "Institucional",
+      "headline": "El documental \"Marcial Maciel: Lobo de Dios\" vuelve a circular como título destacado del catálogo de HBO Max en México.",
+      "source": "ShockVisual (México)",
+      "date": "2026-08-25",
+      "url": "https://style.shockvisual.net/nuevas-alternativas-para-disfrutar-hbo-max-desde-el-televisor/",
+      "why": "documental · recirculación de catálogo — mantiene el caso vigente ante audiencia masiva, sin hecho nuevo.",
+      "action": "Sin acción inmediata. Considerar el timing si coincide con comunicación institucional de Anáhuac."
+    }
+  ],
+  "noticias": [
     {
       "author": "Yuval Noah Harari",
       "priority": "P0",
@@ -193,6 +222,132 @@
       "date": "2026-08-26",
       "url": "https://www.agazeta.com.br/colunas/jaime-troiano/a-potencia-das-marcas-um-novo-pacto-0826",
       "note": "Anuncio propio del autor, sin riesgo — buen candidato para republicar/comentar en el blog de NODS."
+    },
+    {
+      "author": "Cipriano Sánchez García",
+      "priority": "P0",
+      "institution": true,
+      "type": "Evento",
+      "sentiment": "positive",
+      "headline": "Huixquilucan abre un laboratorio de 450 millones de pesos: el rector de Anáhuac señala que solo 1 de cada 10 carreras elegidas es ingeniería.",
+      "source": "El Sol de México",
+      "date": "2026-08-26",
+      "url": "https://oem.com.mx/elsoldetoluca/local/huixquilucan-abre-laboratorio-de-450-millones-de-pesos-para-formar-a-los-ingenieros-del-futuro-31756048",
+      "note": "La nota institucional más fuerte de la semana — replicada en más de 15 medios mexicanos. Material listo para republicar."
+    },
+    {
+      "author": "Cipriano Sánchez García",
+      "priority": "P0",
+      "institution": true,
+      "type": "Prensa",
+      "sentiment": "positive",
+      "headline": "Entrevista de perfil: \"Formar personas antes que profesionales\" — 11 años de gestión del rector de Anáhuac México.",
+      "source": "Líderes Mexicanos",
+      "date": "2026-08-21",
+      "url": "https://lideresmexicanos.com/entrevistas/dr-cipriano-sanchez-garcia-formar-personas-antes-que-profesionales",
+      "note": "Excelente candidata para republicar en el blog: entrevista larga, tono positivo, foco en la visión educativa."
+    },
+    {
+      "author": "Cipriano Sánchez García",
+      "priority": "P0",
+      "institution": true,
+      "type": "Prensa",
+      "sentiment": "positive",
+      "headline": "Anáhuac México encabeza la entrega del primer Padrón EGEL Plus del CENEVAL, que distingue al 9% de las universidades del país.",
+      "source": "Página 24 (México)",
+      "date": "2026-08-25",
+      "url": "https://pagina24.com.mx/2026/08/25/local/ingresan-26-programas-de-la-uaa-al-primer-padron-egel-plus-del-ceneval-por-su-calidad-academica/"
+    },
+    {
+      "author": "Cipriano Sánchez García",
+      "priority": "P0",
+      "institution": true,
+      "type": "Evento",
+      "sentiment": "positive",
+      "headline": "\"Héroes de su propia Odisea\": el rector presentó al Dr. Jesús Villagrasa Lasaga en la bienvenida universitaria 2026.",
+      "source": "Universidad Anáhuac",
+      "date": "2026-08-19",
+      "url": "https://www.anahuac.mx/mexico/en/noticias/heroes-their-own-odyssey-thats-how-2026-university-welcome-and-orientation-event-began"
+    },
+    {
+      "author": "Carlos Gadia",
+      "priority": "P1",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "positive",
+      "headline": "La apuesta de Maringá por la educación inclusiva llega al debate nacional, con el neuropediatra Carlos Gadia y el proyecto \"Autismo Sem Máscara\".",
+      "source": "Jornal Noroeste (Brasil)",
+      "date": "2026-08-27",
+      "url": "https://jornalnoroeste.com/pagina/variedades-1/da-sala-de-aula-ao-debate-nacional-a-aposta-maringaense-na-educacao-inclusiva-em-2026",
+      "note": "Cruce natural con la agenda de inclusión — buen ángulo para contenido propio en Brasil."
+    },
+    {
+      "author": "Suzana Herculano-Houzel",
+      "priority": "P1",
+      "institution": false,
+      "type": "Research",
+      "sentiment": "neutral",
+      "headline": "Nature cita su investigación sobre escalado cortical y cerebelar en un paper sobre células granulares y trayectorias corticales.",
+      "source": "Nature",
+      "date": "2026-08-26",
+      "url": "https://www.nature.com/articles/s41586-026-10946-1",
+      "note": "Cita en Nature — refuerza su autoridad científica, útil para materiales de credenciales."
+    },
+    {
+      "author": "Suzana Herculano-Houzel",
+      "priority": "P1",
+      "institution": false,
+      "type": "Research",
+      "sentiment": "positive",
+      "headline": "Ensayo del Prof. Pedro Demo sobre IA y autoría humana incluye \"The Human Advantage\" entre sus libros de referencia.",
+      "source": "Pedro Demo (Brasil)",
+      "date": "2026-08-21",
+      "url": "http://pedrodemo.blogspot.com/2026/08/ensaio-1605-ia-e-autoria-humana-de-como.html"
+    },
+    {
+      "author": "Ronald Siegel",
+      "priority": "P1",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "positive",
+      "headline": "Revista Fórum reseña el artículo de Harvard Health sobre mindfulness que coescribió, distinguiendo mindfulness de meditación.",
+      "source": "Revista Fórum (Brasil)",
+      "date": "2026-08-27",
+      "url": "https://qoshe.com/revista-f-rum/let-cia-cruz/viver-o-agora-o-que-mindfulness-e-como-a-pr-tica-pode-reduzir-o-estresse/189076097"
+    },
+    {
+      "author": "Ronald Siegel",
+      "priority": "P1",
+      "institution": false,
+      "type": "Research",
+      "sentiment": "neutral",
+      "headline": "Artículo sobre psicoterapia asistida con psicodélicos lo cita: \"el sufrimiento no es el dolor en sí, sino la resistencia al dolor\".",
+      "source": "WI Behavioral Health (Medium)",
+      "date": "2026-08-18",
+      "url": "https://wibehavioralhealth.medium.com/psychedelic-assisted-psychotherapy-when-insight-alone-isnt-enough-4fe696ea6ad1"
+    },
+    {
+      "author": "Yuval Noah Harari",
+      "priority": "P0",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "neutral",
+      "headline": "Análisis sobre las smart glasses de Meta retoma su advertencia en el podcast de The Economist contra dar personería legal a sistemas de IA.",
+      "source": "Medium",
+      "date": "2026-08-27",
+      "url": "https://medium.com/@phillipose/face-value-inside-metas-smart-glasses-gamble-11abebe5226e",
+      "note": "Su postura sobre personería jurídica de la IA sigue circulando — tema con recorrido para el blog."
+    },
+    {
+      "author": "Shauna Shapiro",
+      "priority": "P1",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "neutral",
+      "headline": "Good Men Project la menciona entre los referentes de mindfulness con los que ha trabajado el autor de la nota.",
+      "source": "Good Men Project",
+      "date": "2026-08-20",
+      "url": "https://goodmenproject.com/featured-content/joyless-decadence-kpkn/"
     }
   ]
 }

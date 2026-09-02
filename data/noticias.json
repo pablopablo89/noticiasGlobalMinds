@@ -1,4 +1,9 @@
 {
+  "week": {
+    "start": "2026-08-29",
+    "end": "2026-09-04",
+    "label": "Del 29 de agosto al 4 de septiembre"
+  },
   "updated": "02 sep 2026 · 08:24 (BA)",
   "sample": false,
   "items": [
@@ -94,6 +99,111 @@
       "source": "TN (Argentina)",
       "date": "2026-08-27",
       "url": "https://tn.com.ar/salud/noticias/2026/08/27/practicas-de-mindfulness-para-mejorar-la-concentracion-segun-harvard/"
+    },
+    {
+      "author": "Yuval Noah Harari",
+      "priority": "P0",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "negative",
+      "headline": "Harari volvió a criticar la propuesta de Javier Milei de otorgar personalidad jurídica a empresas de IA.",
+      "source": "Ámbito Financiero",
+      "date": "2026-08-29",
+      "url": "https://www.ambito.com/tecnologia/yuval-harari-volvio-criticar-la-propuesta-javier-milei-otorgar-personalidad-juridica-empresas-ia-n6316240",
+      "note": "Cruce directo Harari–Milei con recorrido en medios argentinos: acá es protagonista, no una cita al pasar. Tema sensible en Argentina, conviene seguirlo."
+    },
+    {
+      "author": "Yuval Noah Harari",
+      "priority": "P0",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "neutral",
+      "headline": "\"Si no actuamos ahora, en 10 años será tarde\": cobertura extensa en español de su entrevista con The Economist.",
+      "source": "Business Insider España",
+      "date": "2026-08-29",
+      "url": "https://www.businessinsider.es/tecnologia/yuval-noah-harari-autor-sapiens-sobre-ia-si-no-actuamos-ahora-10-anos-sera-tarde_7030041_0.html",
+      "note": "Buen anclaje para el mercado España — la entrevista de The Economist sigue rindiendo dos semanas después."
+    },
+    {
+      "author": "Yuval Noah Harari",
+      "priority": "P0",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "neutral",
+      "headline": "\"Yuval Harari Pulls The AI Fire Alarm\": columna de opinión sobre sus advertencias en materia de IA.",
+      "source": "MediaPost",
+      "date": "2026-08-24",
+      "url": "https://www.mediapost.com/publications/article/417429/yuval-harari-pulls-the-ai-fire-alarm.html"
+    },
+    {
+      "author": "Yuval Noah Harari",
+      "priority": "P0",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "neutral",
+      "headline": "Hindustan Times reproduce la entrevista completa sobre los riesgos económicos y políticos de la IA.",
+      "source": "Hindustan Times",
+      "date": "2026-08-22",
+      "url": "https://www.hindustantimes.com/technology/yuval-noah-harari-on-the-economic-and-political-perils-of-ai-101787388565411.html",
+      "note": "Aporta diversidad de mercado (India/Asia), fuera del circuito habitual LatAm–Europa."
+    },
+    {
+      "author": "Anna Lembke",
+      "priority": "P1",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "positive",
+      "headline": "\"Estamos perdiendo la capacidad de tolerar el aburrimiento\", entrevista exclusiva con la autora de Nación Dopamina.",
+      "source": "Folha de Pernambuco",
+      "date": "2026-08-29",
+      "url": "https://www.folhape.com.br/noticia/amp/509391/estamos-perdendo-a-capacidade-de-tolerar-o-tedio-diz-autora-do/",
+      "note": "Entrevista propia, no una cita — el mejor material de Lembke de la semana para republicar."
+    },
+    {
+      "author": "Anna Lembke",
+      "priority": "P1",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "neutral",
+      "headline": "El Universal recoge su testimonio en el juicio de Los Ángeles sobre los daños de las redes sociales.",
+      "source": "El Universal (México)",
+      "date": "2026-08-29",
+      "url": "https://www.pressreader.com/mexico/el-universal/20260829/282574499934996"
+    },
+    {
+      "author": "Jaime Troiano",
+      "priority": "P1",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "positive",
+      "headline": "\"A potência das marcas: um novo pacto\" — columna propia donde anuncia su nuevo libro, a lanzarse el 29 de septiembre.",
+      "source": "A Gazeta",
+      "date": "2026-08-27",
+      "url": "https://www.agazeta.com.br/colunas/jaime-troiano/a-potencia-das-marcas-um-novo-pacto-0826",
+      "note": "Anuncio propio del autor — vale tenerlo en agenda para fin de septiembre."
+    },
+    {
+      "author": "Jaime Troiano",
+      "priority": "P1",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "positive",
+      "headline": "\"Los profesionales de branding necesitan mirar más allá de los hechos de mercado\", difundido por Mundo do Marketing.",
+      "source": "Mundo do Marketing",
+      "date": "2026-08-29",
+      "url": "https://x.com/mundodmarketing/status/2093323931025387885"
+    },
+    {
+      "author": "Cipriano Sánchez García",
+      "priority": "P0",
+      "institution": true,
+      "type": "Evento",
+      "sentiment": "positive",
+      "headline": "Sigue la cobertura del lanzamiento de Anáhuac LABS para fortalecer la formación de ingenieros.",
+      "source": "Universidad Anáhuac",
+      "date": "2026-08-29",
+      "url": "https://www.anahuac.mx/mexico/noticias/anahuac-labs-inaugura-una-nueva-vision-de-la-ingenieria-tecnologia-con-sentido-humano",
+      "note": "Tercera semana consecutiva en medios mexicanos — la cobertura institucional más sostenida del período."
     }
   ]
 }
