@@ -1,6 +1,12 @@
 {
   "weeks": [
     {
+      "date": "2026-08-31",
+      "label": "Corrida del 31 de agosto",
+      "newsFile": "2026-08-31-noticias.json",
+      "noticias": 11
+    },
+    {
       "date": "2026-08-28",
       "label": "Corrida del 28 de agosto",
       "newsFile": "2026-08-28-noticias.json",

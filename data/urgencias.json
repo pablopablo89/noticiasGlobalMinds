@@ -1,7 +1,46 @@
 {
-  "updated": "28 ago 2026 · 09:45 (BA)",
+  "updated": "02 sep 2026 · 08:24 (BA)",
   "sample": false,
   "items": [
+    {
+      "level": "rojo",
+      "score": 88,
+      "author": "Marcial Maciel",
+      "priority": "P1",
+      "vertical": "Institucional",
+      "headline": "Publicación viral en redes sociales afirma que los Legionarios de Cristo admitieron 175 casos de pederastia de 33 sacerdotes, con Maciel implicado en al menos 60 de ellos.",
+      "source": "Facebook (post viral)",
+      "date": "2026-09-02",
+      "url": "https://www.facebook.com/pepe.figueredoaguilera/posts/los-legionarios-de-cristo-admiten-175-casos-de-pederastia-de-33-sacerdotesla-con/10227870898797418/",
+      "why": "admiten · 175 casos · pederastia · Maciel implicado en 60 — acusación de máxima gravedad, aunque la fuente es un post de redes sociales sin confirmación todavía en medios tradicionales.",
+      "action": "Verificar en fuentes periodísticas si existe una admisión formal reciente de la congregación. Monitorear si escala a prensa establecida antes de cualquier comunicación institucional."
+    },
+    {
+      "level": "rojo",
+      "score": 82,
+      "author": "Marcial Maciel",
+      "priority": "P1",
+      "vertical": "Institucional",
+      "headline": "La Razón (Madrid) reporta que el Vaticano interviene congregaciones señaladas, incluido el Regnum Christi, por la \"doble vida\" de su fundador Marcial Maciel.",
+      "source": "La Razón (Madrid)",
+      "date": "2026-08-30",
+      "url": "https://www.larazon.es/sociedad/plaga-congregaciones-intervenidas_202608306a937e7e2bcaf82098f5b5e0.html",
+      "why": "intervención vaticana · Regnum Christi · doble vida del fundador — cobertura en medio español de referencia, reproducida también en PressReader, sobre una medida institucional activa de la Santa Sede.",
+      "action": "Monitorear si la nota menciona a Anáhuac u otras instituciones educativas ligadas a la congregación. Tener lista una posición institucional ante consultas de prensa."
+    },
+    {
+      "level": "naranja",
+      "score": 62,
+      "author": "Marcial Maciel",
+      "priority": "P1",
+      "vertical": "Institucional",
+      "headline": "Columna de opinión en medio mexicano lo llama \"depredador religioso\" al repasar denuncias históricas contra Maciel y los Legionarios de Cristo.",
+      "source": "Tribuna de la Bahía (México)",
+      "date": "2026-08-31",
+      "url": "https://tribunadelabahia.com.mx/marcial-maciel-resulto-benefactor-al-revelar-la-podredumbre-de-su-religion/",
+      "why": "depredador religioso · podredumbre · prensa mexicana — columna de opinión con lenguaje duro, en el mismo mercado que Anáhuac.",
+      "action": "Sin acción inmediata. Sumar al radar de menciones mexicanas junto con la cobertura de Página 24."
+    },
     {
       "level": "rojo",
       "score": 85,
