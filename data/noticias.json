@@ -36,11 +36,11 @@
       "institution": false,
       "type": "Prensa",
       "sentiment": "positive",
-      "headline": "Entrevistada por Oprah en su podcast sobre por qué no podemos dejar de hacer scroll.",
-      "source": "The Oprah Podcast (iHeart)",
-      "date": "2026-08-31",
-      "url": "https://y100.iheart.com/content/2026-08-31-the-silent-breakup-why-quiet-quitting-is-affecting-modern-marriages/",
-      "note": "Buen gancho de republicación — entrevista directa, no cita al pasar."
+      "headline": "Entrevistada por Oprah en su podcast sobre por qué no podemos dejar de hacer scroll (episodio completo, 48 min).",
+      "source": "The Oprah Podcast",
+      "date": "2026-08-27",
+      "url": "https://www.youtube.com/watch?v=sjBz3SM9UPY",
+      "note": "Entrevista directa, no cita al pasar. Ojo: la alerta de Google linkeaba mal a una nota de iHeart sobre otro tema; el link correcto es el episodio."
     },
     {
       "author": "Margaret Hagan",
@@ -133,7 +133,7 @@
       "headline": "El Consejo de Comunicación de México reconoce públicamente su gestión como rector de la Universidad Anáhuac.",
       "source": "Consejo Comunicación (Twitter/X)",
       "date": "2026-09-01",
-      "url": "http://twitter.com/ConsejoCC/status/2094945849973280922",
+      "url": "https://x.com/ConsejoCC/status/2094945849973280922",
       "note": "La frase \"durante su gestión\" sugiere un posible cambio de rectorado — vale confirmar si continúa en el cargo."
     },
     {

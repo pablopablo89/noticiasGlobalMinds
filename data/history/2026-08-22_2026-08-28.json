@@ -72,17 +72,6 @@
       "institution": false,
       "type": "Prensa",
       "sentiment": "neutral",
-      "headline": "The Economist repasa el acuerdo de Meta (~US$17.000M) por el juicio de adicción en redes, en la misma edición que perfila el análisis de Harari sobre los riesgos económicos y políticos de la IA.",
-      "source": "The Economist",
-      "date": "2026-08-26",
-      "url": "https://www.economist.com/business/2026/08/26/meta-settles-its-blockbuster-trial-for-up-to-17bn"
-    },
-    {
-      "author": "Yuval Noah Harari",
-      "priority": "P0",
-      "institution": false,
-      "type": "Prensa",
-      "sentiment": "neutral",
       "headline": "ONGs piden audiencia pública en el Senado; el debate cita el cuestionamiento de Harari en el Financial Times sobre otorgar personería jurídica a agentes de IA.",
       "source": "Noticias Ambientales (Argentina)",
       "date": "2026-08-25",
@@ -292,17 +281,6 @@
       "date": "2026-08-26",
       "url": "https://www.nature.com/articles/s41586-026-10946-1",
       "note": "Cita en Nature — refuerza su autoridad científica, útil para materiales de credenciales."
-    },
-    {
-      "author": "Suzana Herculano-Houzel",
-      "priority": "P1",
-      "institution": false,
-      "type": "Research",
-      "sentiment": "positive",
-      "headline": "Ensayo del Prof. Pedro Demo sobre IA y autoría humana incluye \"The Human Advantage\" entre sus libros de referencia.",
-      "source": "Pedro Demo (Brasil)",
-      "date": "2026-08-21",
-      "url": "http://pedrodemo.blogspot.com/2026/08/ensaio-1605-ia-e-autoria-humana-de-como.html"
     },
     {
       "author": "Ronald Siegel",

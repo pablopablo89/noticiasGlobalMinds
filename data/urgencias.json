@@ -9,19 +9,6 @@
   "items": [
     {
       "level": "rojo",
-      "score": 88,
-      "author": "Marcial Maciel",
-      "priority": "P1",
-      "vertical": "Institucional",
-      "headline": "Publicación viral en redes sociales afirma que los Legionarios de Cristo admitieron 175 casos de pederastia de 33 sacerdotes, con Maciel implicado en al menos 60 de ellos.",
-      "source": "Facebook (post viral)",
-      "date": "2026-09-02",
-      "url": "https://www.facebook.com/pepe.figueredoaguilera/posts/los-legionarios-de-cristo-admiten-175-casos-de-pederastia-de-33-sacerdotesla-con/10227870898797418/",
-      "why": "admiten · 175 casos · pederastia · Maciel implicado en 60 — acusación de máxima gravedad, aunque la fuente es un post de redes sociales sin confirmación todavía en medios tradicionales.",
-      "action": "Verificar en fuentes periodísticas si existe una admisión formal reciente de la congregación. Monitorear si escala a prensa establecida antes de cualquier comunicación institucional."
-    },
-    {
-      "level": "rojo",
       "score": 82,
       "author": "Marcial Maciel",
       "priority": "P1",
@@ -45,6 +32,19 @@
       "url": "https://tribunadelabahia.com.mx/marcial-maciel-resulto-benefactor-al-revelar-la-podredumbre-de-su-religion/",
       "why": "depredador religioso · podredumbre · prensa mexicana — columna de opinión con lenguaje duro, en el mismo mercado que Anáhuac.",
       "action": "Sin acción inmediata. Sumar al radar de menciones mexicanas junto con la cobertura de Página 24."
+    },
+    {
+      "level": "naranja",
+      "score": 45,
+      "author": "Marcial Maciel",
+      "priority": "P1",
+      "vertical": "Institucional",
+      "headline": "Recircula en Facebook una nota de France24 de diciembre de 2019 sobre 175 casos de pederastia admitidos por los Legionarios, con Maciel implicado en al menos 60.",
+      "source": "Facebook (repost de France24, 22-12-2019)",
+      "date": "2026-09-02",
+      "url": "https://www.facebook.com/pepe.figueredoaguilera/posts/los-legionarios-de-cristo-admiten-175-casos-de-pederastia-de-33-sacerdotesla-con/10227870898797418/",
+      "why": "Contenido de archivo, no noticia nueva: el post reproduce una nota de France24 del 22-12-2019. Alcance bajo (7 reacciones, 2 comentarios). Relevante solo como señal de recirculación.",
+      "action": "Sin acción. Registrar como recirculación de archivo; no tratar como hecho nuevo."
     }
   ]
 }
