@@ -318,7 +318,7 @@
 const $ = s => document.querySelector(s);
 const esc = s => String(s==null?'':s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const MESES = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
-const fmtDate = d => { if(!d) return ''; const m = /^(d{4})-(d{2})-(d{2})/.exec(d); if(!m) return esc(d); return Number(m[3]) + ' ' + MESES[Number(m[2])-1]; };
+const fmtDate = d => { if(!d) return ''; const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(d); if(!m) return esc(d); return Number(m[3]) + ' ' + MESES[Number(m[2])-1]; };
 
 function selectTab(which){
   ['pub','news','hist'].forEach(k=>{
