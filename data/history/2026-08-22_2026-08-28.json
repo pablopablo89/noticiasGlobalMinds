@@ -2,34 +2,7 @@
   "start": "2026-08-22",
   "end": "2026-08-28",
   "label": "Del 22 al 28 de agosto",
-  "urgencias": [
-    {
-      "level": "rojo",
-      "score": 85,
-      "author": "Marcial Maciel",
-      "priority": "P1",
-      "vertical": "Institucional",
-      "headline": "Columna de opinión en Página 24 (México) lo señala como \"el más grande depredador\" y cuestiona que no se haya cerrado la Legión de Cristo.",
-      "source": "Página 24 (México)",
-      "date": "2026-08-25",
-      "url": "https://pagina24.com.mx/2026/08/25/plaza-de-armas/plaza-de-armas-3582/",
-      "why": "depredador · víctimas · reparación del daño — acusación directa en prensa mexicana, con mención explícita a la congregación vinculada a Anáhuac.",
-      "action": "Monitorear si escala a medios de mayor alcance. Tener lista una posición institucional por si un periodista consulta a Anáhuac."
-    },
-    {
-      "level": "naranja",
-      "score": 68,
-      "author": "Marcial Maciel",
-      "priority": "P1",
-      "vertical": "Institucional",
-      "headline": "El documental \"Marcial Maciel: Lobo de Dios\" vuelve a circular como título destacado del catálogo de HBO Max en México.",
-      "source": "ShockVisual (México)",
-      "date": "2026-08-25",
-      "url": "https://style.shockvisual.net/nuevas-alternativas-para-disfrutar-hbo-max-desde-el-televisor/",
-      "why": "documental · recirculación de catálogo — mantiene el caso vigente ante audiencia masiva, sin hecho nuevo.",
-      "action": "Sin acción inmediata. Considerar el timing si coincide con comunicación institucional de Anáhuac."
-    }
-  ],
+  "urgencias": [],
   "noticias": [
     {
       "author": "Yuval Noah Harari",

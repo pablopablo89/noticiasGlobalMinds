@@ -1,6 +1,6 @@
 # Noticias Global Minds — Dashboard (NODS)
 
-Sitio estático (deploy en Vercel) con tres pestañas para el monitoreo de los 20 autores de Global Minds:
+Sitio estático (deploy en Vercel) con tres pestañas para el monitoreo de los 19 autores de Global Minds:
 
 - **Urgencias reales** — solo lo crítico (riesgo reputacional, niveles Rojo/Naranja). **Acumulativo**: las críticas nunca se archivan, las nuevas quedan arriba.
 - **Noticias Global Minds** — todas las menciones de la corrida actual, con filtros por autor, tipo e institución.

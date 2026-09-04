@@ -6,45 +6,5 @@
   },
   "updated": "04 sep 2026 · 08:11 (BA)",
   "sample": false,
-  "items": [
-    {
-      "level": "rojo",
-      "score": 82,
-      "author": "Marcial Maciel",
-      "priority": "P1",
-      "vertical": "Institucional",
-      "headline": "La Razón (Madrid) reporta que el Vaticano interviene congregaciones señaladas, incluido el Regnum Christi, por la \"doble vida\" de su fundador Marcial Maciel.",
-      "source": "La Razón (Madrid)",
-      "date": "2026-08-30",
-      "url": "https://www.larazon.es/sociedad/plaga-congregaciones-intervenidas_202608306a937e7e2bcaf82098f5b5e0.html",
-      "why": "intervención vaticana · Regnum Christi · doble vida del fundador — cobertura en medio español de referencia, reproducida también en PressReader, sobre una medida institucional activa de la Santa Sede.",
-      "action": "Monitorear si la nota menciona a Anáhuac u otras instituciones educativas ligadas a la congregación. Tener lista una posición institucional ante consultas de prensa."
-    },
-    {
-      "level": "naranja",
-      "score": 62,
-      "author": "Marcial Maciel",
-      "priority": "P1",
-      "vertical": "Institucional",
-      "headline": "Columna de opinión en medio mexicano lo llama \"depredador religioso\" al repasar denuncias históricas contra Maciel y los Legionarios de Cristo.",
-      "source": "Tribuna de la Bahía (México)",
-      "date": "2026-08-31",
-      "url": "https://tribunadelabahia.com.mx/marcial-maciel-resulto-benefactor-al-revelar-la-podredumbre-de-su-religion/",
-      "why": "depredador religioso · podredumbre · prensa mexicana — columna de opinión con lenguaje duro, en el mismo mercado que Anáhuac.",
-      "action": "Sin acción inmediata. Sumar al radar de menciones mexicanas junto con la cobertura de Página 24."
-    },
-    {
-      "level": "naranja",
-      "score": 45,
-      "author": "Marcial Maciel",
-      "priority": "P1",
-      "vertical": "Institucional",
-      "headline": "Recircula en Facebook una nota de France24 de diciembre de 2019 sobre 175 casos de pederastia admitidos por los Legionarios, con Maciel implicado en al menos 60.",
-      "source": "Facebook (repost de France24, 22-12-2019)",
-      "date": "2026-09-02",
-      "url": "https://www.facebook.com/pepe.figueredoaguilera/posts/los-legionarios-de-cristo-admiten-175-casos-de-pederastia-de-33-sacerdotesla-con/10227870898797418/",
-      "why": "Contenido de archivo, no noticia nueva: el post reproduce una nota de France24 del 22-12-2019. Alcance bajo (7 reacciones, 2 comentarios). Relevante solo como señal de recirculación.",
-      "action": "Sin acción. Registrar como recirculación de archivo; no tratar como hecho nuevo."
-    }
-  ]
+  "items": []
 }
