@@ -4,9 +4,67 @@
     "end": "2026-09-04",
     "label": "Del 29 de agosto al 4 de septiembre"
   },
-  "updated": "02 sep 2026 · 08:24 (BA)",
+  "updated": "04 sep 2026 · 08:11 (BA)",
   "sample": false,
   "items": [
+    {
+      "author": "Cipriano Sánchez García",
+      "priority": "P0",
+      "institution": true,
+      "type": "Institucional",
+      "sentiment": "neutral",
+      "headline": "Deja la rectoría de la Universidad Anáhuac México tras 11 años de gestión; asume el Dr. Jesús Villagrasa Lasaga, L.C.",
+      "source": "Universidad Anáhuac / Reforma",
+      "date": "2026-09-02",
+      "url": "https://www.anahuac.mx/mexico/noticias/dr-jesus-villagrasa-lasaga-lc-nuevo-rector-de-la-universidad-anahuac-mexico",
+      "note": "Confirma el cambio de rectorado que ya se intuía la semana pasada. Cobertura institucional y de prensa (Reforma), despedida cálida en redes — sin señales de conflicto."
+    },
+    {
+      "author": "Anna Lembke",
+      "priority": "P1",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "neutral",
+      "headline": "The Times explica a madres y padres los riesgos de la adicción a los videojuegos citando \"Dopamine Nation\".",
+      "source": "The Times (Reino Unido)",
+      "date": "2026-09-02",
+      "url": "https://www.thetimes.com/life-style/parenting/article/is-gaming-as-bad-as-social-media-what-parents-needs-to-know-fwbskr62l"
+    },
+    {
+      "author": "Anna Lembke",
+      "priority": "P1",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "positive",
+      "headline": "Entrevistada por Oprah en su podcast sobre por qué no podemos dejar de hacer scroll.",
+      "source": "The Oprah Podcast (iHeart)",
+      "date": "2026-08-31",
+      "url": "https://y100.iheart.com/content/2026-08-31-the-silent-breakup-why-quiet-quitting-is-affecting-modern-marriages/",
+      "note": "Buen gancho de republicación — entrevista directa, no cita al pasar."
+    },
+    {
+      "author": "Margaret Hagan",
+      "priority": "P1",
+      "institution": false,
+      "type": "Research",
+      "sentiment": "neutral",
+      "headline": "Citada en dos papers académicos sobre acceso a la justicia e IA a partir de su trabajo en Stanford Legal Design Lab.",
+      "source": "Suor Orsola University Press",
+      "date": "2026-09-02",
+      "url": "https://universitypress.unisob.na.it/ojs/index.php/ejplt/article/view/2367"
+    },
+    {
+      "author": "Shauna Shapiro",
+      "priority": "P1",
+      "institution": false,
+      "type": "Prensa",
+      "sentiment": "positive",
+      "headline": "\"Sette piccoli passi per riprogrammare il cervello e vivere meglio\" retoma su trabajo sobre mindfulness.",
+      "source": "ipsico.it (Italia)",
+      "date": "2026-09-02",
+      "url": "https://ipsico.it/news/sette-piccoli-passi-per-riprogrammare-il-cervello-e-vivere-meglio/",
+      "note": "Diversifica mercado hacia Italia."
+    },
     {
       "author": "Yuval Noah Harari",
       "priority": "P0",
