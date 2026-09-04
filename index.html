@@ -132,6 +132,12 @@
   .ucard{border:var(--border-hairline); border-left:3px solid var(--data-down);
     border-radius:var(--radius-card); padding:var(--space-5); background:var(--surface)}
   .ucard.warn{border-left-color:var(--data-warn)}
+  .ucard.pub{border-left-color:var(--data-up)}
+  .ucard.pub2{border-left-color:var(--accent)}
+  .fmt{font-size:var(--fs-caption); font-weight:var(--fw-medium); color:var(--text-muted);
+    border:var(--border-hairline); padding:2px 9px; border-radius:var(--radius-pill); white-space:nowrap}
+  .quote{margin-top:var(--space-3); padding-left:var(--space-4); border-left:2px solid var(--gray-200);
+    font-size:var(--fs-body); line-height:1.45; color:var(--text)}
   .r1{display:flex; flex-wrap:wrap; gap:var(--space-3); align-items:center; margin-bottom:var(--space-2)}
 
   /* Pill — hairline outline, colored text only (brand pattern, never a solid fill) */
@@ -236,11 +242,11 @@
 <div class="tabsbar">
   <div class="wrap">
     <div class="tabs" role="tablist">
-      <button class="tab urg" id="tab-urg" role="tab" aria-selected="true" aria-controls="panel-urg">
-        Urgencias reales <span class="cnt" id="cnt-urg">0</span>
+      <button class="tab" id="tab-pub" role="tab" aria-selected="true" aria-controls="panel-pub">
+        Para publicar <span class="cnt" id="cnt-pub">0</span>
       </button>
       <button class="tab" id="tab-news" role="tab" aria-selected="false" aria-controls="panel-news">
-        Noticias Global Minds <span class="cnt" id="cnt-news">0</span>
+        Todo el monitoreo <span class="cnt" id="cnt-news">0</span>
       </button>
       <button class="tab" id="tab-hist" role="tab" aria-selected="false" aria-controls="panel-hist">
         Archivadas <span class="cnt" id="cnt-hist">0</span>
@@ -251,18 +257,18 @@
 
 <main class="wrap">
 
-  <!-- ===== TAB 1: URGENCIAS ===== -->
-  <section class="panel" id="panel-urg" role="tabpanel" aria-labelledby="tab-urg">
-    <div class="callout" id="banner-urg" hidden><span class="i">i</span><span></span></div>
-    <div class="weekchip" id="week-urg">Semana <b>—</b></div>
+  <!-- ===== TAB 1: PARA PUBLICAR ===== -->
+  <section class="panel" id="panel-pub" role="tabpanel" aria-labelledby="tab-pub">
+    <div class="callout" id="banner-pub" hidden><span class="i">i</span><span></span></div>
+    <div class="weekchip" id="week-pub">Semana <b>—</b></div>
     <div class="kpis">
-      <div class="card"><span class="label">Señales críticas</span><span class="value num" id="k-total">0</span></div>
-      <div class="card"><span class="label">Rojo · 80–100</span><span class="value bad num" id="k-rojo">0</span></div>
-      <div class="card"><span class="label">Naranja · 60–79</span><span class="value warn num" id="k-naranja">0</span></div>
-      <div class="card"><span class="label">Autores afectados</span><span class="value num" id="k-aut">0</span></div>
+      <div class="card"><span class="label">Listo para publicar</span><span class="value num" id="k-listo">0</span></div>
+      <div class="card"><span class="label">Buen material</span><span class="value num" id="k-bueno">0</span></div>
+      <div class="card"><span class="label">Autores con material</span><span class="value num" id="k-aut">0</span></div>
+      <div class="card"><span class="label">Revisadas esta semana</span><span class="value num" id="k-total">0</span></div>
     </div>
-    <div class="shead"><h2>Requieren decisión</h2><span class="rule"></span><span class="cnt num" id="urg-count">0 críticas</span></div>
-    <div class="feed" id="urg-feed"></div>
+    <div class="shead"><h2>Material para redes</h2><span class="rule"></span><span class="cnt num" id="pub-count">0 piezas</span></div>
+    <div class="feed" id="pub-feed"></div>
   </section>
 
   <!-- ===== TAB 2: NOTICIAS ===== -->
@@ -272,14 +278,14 @@
     <div class="filters">
       <input id="q" type="search" placeholder="Buscar por titular, fuente o autor…" aria-label="Buscar">
       <select id="f-author" aria-label="Filtrar por autor"><option value="">Todos los autores</option></select>
-      <select id="f-type" aria-label="Filtrar por tipo">
-        <option value="">Todo tipo</option><option>Prensa</option><option>Social</option><option>Research</option><option>Evento</option>
+      <select id="f-fmt" aria-label="Filtrar por formato sugerido">
+        <option value="">Todo formato</option><option>Cita</option><option>Carrusel</option><option>Reel</option><option>Video</option><option>Nota + link</option><option>Dato</option>
       </select>
-      <select id="f-inst" aria-label="Filtrar institucional">
-        <option value="">Todas</option><option value="1">Solo institucionales</option>
+      <select id="f-pub" aria-label="Filtrar por utilidad para redes">
+        <option value="">Todo el material</option><option value="1">Solo lo publicable</option><option value="0">Solo registro</option>
       </select>
     </div>
-    <div class="shead"><h2>Todas las menciones de los 18 autores</h2><span class="rule"></span><span class="cnt num" id="news-count">0</span></div>
+    <div class="shead"><h2>Todo lo que detectó el monitoreo</h2><span class="rule"></span><span class="cnt num" id="news-count">0</span></div>
     <div class="table-wrap"><div class="nlist" id="news-list"></div></div>
   </section>
 
@@ -288,14 +294,13 @@
     <div id="hist-weeks">
       <div class="shead"><h2>Semanas archivadas</h2><span class="rule"></span></div>
       <p style="color:var(--text-muted); font-size:var(--fs-body-sm); margin:0 0 var(--space-5)">
-        Cada semana va de sábado a viernes y se cierra el lunes siguiente, después de que salió el reporte. Incluye las señales críticas y las noticias de ese período.
+        Cada semana va de sábado a viernes y se cierra el lunes siguiente. Guarda todo el material detectado en ese período, con su evaluación para redes.
       </p>
       <div id="hist-list-wrap"><p class="hist-empty">Cargando…</p></div>
     </div>
     <div id="hist-week-view" hidden>
       <button class="btn hist-back" id="hist-back">← Volver al listado</button>
       <div class="shead"><h2 id="hist-week-title">—</h2><span class="rule"></span><span class="cnt num" id="hist-week-count">0</span></div>
-      <div class="feed" id="hist-urg-list" style="margin-bottom:var(--space-6)"></div>
       <div class="table-wrap"><div class="nlist" id="hist-news-list"></div></div>
     </div>
   </section>
@@ -305,7 +310,7 @@
 <footer>
   <div class="wrap">
     <div class="srcs"><span>Fuentes:</span><span class="schip">Google Alerts · 63</span><span class="schip">Talkwalker · 18</span></div>
-    <div>Noticias Global Minds · Grupo NODS — se actualiza lunes, miércoles y viernes</div>
+    <div>Noticias Global Minds · Grupo NODS — detecta material con valor para nuestras redes</div>
   </div>
 </footer>
 
@@ -315,12 +320,12 @@ const esc = s => String(s==null?'':s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':
 const fmtDate = d => { if(!d) return ''; const t=new Date(d); return isNaN(t)? esc(d) : t.toLocaleDateString('es-AR',{day:'2-digit',month:'short'}); };
 
 function selectTab(which){
-  ['urg','news','hist'].forEach(k=>{
+  ['pub','news','hist'].forEach(k=>{
     $('#tab-'+k).setAttribute('aria-selected', k===which);
     $('#panel-'+k).hidden = k!==which;
   });
 }
-$('#tab-urg').onclick = ()=>selectTab('urg');
+$('#tab-pub').onclick = ()=>selectTab('pub');
 $('#tab-news').onclick = ()=>selectTab('news');
 $('#tab-hist').onclick = ()=>selectTab('hist');
 
@@ -329,47 +334,45 @@ async function loadJSON(path){
   catch(e){ return null; }
 }
 
-function urgCardHTML(i){
-  const warn = i.level==='naranja';
-  return `<article class="ucard ${warn?'warn':''}">
+const PUB_LISTO = 80, PUB_BUENO = 55;
+const tier = n => (n.pub == null ? 'no' : n.pub >= PUB_LISTO ? 'listo' : n.pub >= PUB_BUENO ? 'bueno' : 'no');
+
+function pubCardHTML(n){
+  const t = tier(n);
+  return `<article class="ucard ${t==='listo'?'pub':'pub2'}">
       <div class="r1">
-        <span class="pill ${warn?'warn':'bad'}">${warn?'Naranja':'Rojo'}</span>
-        <span class="who">${esc(i.author)}</span>
-        ${i.priority?`<span class="ptag">${esc(i.priority)}${i.vertical?' · '+esc(i.vertical):''}</span>`:''}
-        ${i.score!=null?`<span class="score">Score <b class="num">${esc(i.score)}</b></span>`:''}
+        <span class="pill ${t==='listo'?'good':'accent'}">${t==='listo'?'Listo para publicar':'Buen material'}</span>
+        <span class="who">${esc(n.author)}</span>
+        ${n.format?`<span class="fmt">${esc(n.format)}</span>`:''}
+        ${n.pub!=null?`<span class="score">Valor <b class="num">${esc(n.pub)}</b></span>`:''}
       </div>
-      <p class="hl">${esc(i.headline)}</p>
-      <div class="src">${i.source?`<span>Fuente: <b>${esc(i.source)}</b></span><span class="sep">·</span>`:''}<span class="num">${fmtDate(i.date)}</span></div>
-      ${i.why?`<div class="why"><span class="tag">Por qué</span><span>${esc(i.why)}</span></div>`:''}
-      ${i.action?`<div class="anote"><b>Acción sugerida:</b> ${esc(i.action)}</div>`:''}
-      <div class="acts">${i.url&&i.url!=='#'?`<a class="btn primary" href="${esc(i.url)}" target="_blank" rel="noopener">Abrir fuente ↗</a>`:''}</div>
+      <p class="hl">${esc(n.headline)}</p>
+      <div class="src">${n.source?`<span>Fuente: <b>${esc(n.source)}</b></span><span class="sep">·</span>`:''}<span class="num">${fmtDate(n.date)}</span></div>
+      ${n.quote?`<div class="quote">${esc(n.quote)}</div>`:''}
+      ${n.angle?`<div class="why"><span class="tag">Por qué funciona</span><span>${esc(n.angle)}</span></div>`:''}
+      ${n.note?`<div class="anote"><b>Nota:</b> ${esc(n.note)}</div>`:''}
+      <div class="acts">${n.url&&n.url!=='#'?`<a class="btn primary" href="${esc(n.url)}" target="_blank" rel="noopener">Abrir fuente ↗</a>`:''}</div>
     </article>`;
 }
 
-function renderUrg(data){
-  const items = ((data && data.items) || []).slice();
-  const rojo = items.filter(i=>i.level==='rojo').length;
-  const naranja = items.filter(i=>i.level==='naranja').length;
-  $('#k-total').textContent = items.length;
-  $('#k-rojo').textContent = rojo;
-  $('#k-naranja').textContent = naranja;
-  $('#k-aut').textContent = new Set(items.map(i=>i.author)).size;
-  const cntEl = $('#cnt-urg'); cntEl.textContent = items.length; cntEl.classList.toggle('hot', items.length>0);
-  $('#urg-count').textContent = items.length + (items.length===1?' crítica':' críticas');
-  if(data && data.week) $('#week-urg').innerHTML = 'Semana <b>' + esc(data.week.label) + '</b>';
+function renderPub(data){
+  const all = (data && data.items) || [];
+  const pubs = all.filter(n=>tier(n)!=='no')
+    .sort((a,b)=> (b.pub||0)-(a.pub||0) || new Date(b.date)-new Date(a.date));
+  const listo = pubs.filter(n=>tier(n)==='listo').length;
+  $('#k-listo').textContent = listo;
+  $('#k-bueno').textContent = pubs.length - listo;
+  $('#k-aut').textContent = new Set(pubs.map(n=>n.author)).size;
+  $('#k-total').textContent = all.length;
+  const cntEl = $('#cnt-pub'); cntEl.textContent = pubs.length;
+  $('#pub-count').textContent = pubs.length + (pubs.length===1?' pieza':' piezas');
+  if(data && data.week) $('#week-pub').innerHTML = 'Semana <b>' + esc(data.week.label) + '</b>';
+  if(data && data.sample) showBanner('#banner-pub','Datos de ejemplo — se reemplazan automáticamente en la primera corrida.');
 
-  if(data && data.sample) showBanner('#banner-urg','Datos de ejemplo — se reemplazan automáticamente en la primera corrida.');
-  else if(data && data.updated) $('#updated').textContent = data.updated;
-
-  const feed = $('#urg-feed');
-  if(!items.length){
-    feed.innerHTML = `<div class="empty"><div class="ring">✓</div><h3>Sin señales críticas esta semana</h3>
-      <p>No se detectaron controversias, litigios ni riesgos reputacionales. El sistema sigue vigilando; lo neutral/positivo está en la pestaña de Noticias.</p></div>`;
-    return;
-  }
-  const order = {rojo:0, naranja:1};
-  items.sort((a,b)=> (new Date(b.date)-new Date(a.date)) || (order[a.level]-order[b.level]) || (b.score||0)-(a.score||0));
-  feed.innerHTML = items.map(urgCardHTML).join('');
+  const feed = $('#pub-feed');
+  feed.innerHTML = pubs.length ? pubs.map(pubCardHTML).join('')
+    : `<div class="empty"><div class="ring">·</div><h3>Nada para publicar todavía</h3>
+      <p>Esta semana el monitoreo no encontró material con valor para redes. Todo lo detectado está en la pestaña de al lado.</p></div>`;
 }
 
 function newsCardsHTML(rows){
@@ -378,13 +381,14 @@ function newsCardsHTML(rows){
       <div class="r1 tags">
         <span class="dot-s s-${esc(n.sentiment||'neutral')}" title="${esc(n.sentiment||'neutral')}"></span>
         <span class="who" style="font-size:var(--fs-body)">${esc(n.author)}</span>
-        ${n.priority?`<span class="chip ${n.priority==='P0'?'p0':''}">${esc(n.priority)}</span>`:''}
+        ${tier(n)!=='no'?`<span class="chip inst">${tier(n)==='listo'?'Listo':'Buen material'}</span>`:''}
+        ${n.format?`<span class="chip">${esc(n.format)}</span>`:''}
         ${n.type?`<span class="chip">${esc(n.type)}</span>`:''}
-        ${n.institution?`<span class="chip inst">Institucional</span>`:''}
         ${n.url&&n.url!=='#'?`<a class="nlink" href="${esc(n.url)}" target="_blank" rel="noopener">Abrir ↗</a>`:''}
       </div>
       <p class="hl">${esc(n.headline)}</p>
       <div class="src">${n.source?`<span><b>${esc(n.source)}</b></span><span class="sep">·</span>`:''}<span class="num">${fmtDate(n.date)}</span></div>
+      ${n.angle?`<div class="anote"><b>Por qué funciona:</b> ${esc(n.angle)}</div>`:''}
       ${n.note?`<div class="anote"><b>Nota:</b> ${esc(n.note)}</div>`:''}
     </article>`).join('');
 }
@@ -400,18 +404,19 @@ function renderNews(data){
   [...new Set(NEWS.map(n=>n.author))].sort().forEach(a=>{ const o=document.createElement('option'); o.value=a; o.textContent=a; sel.appendChild(o); });
   applyFilters();
 }
-['#q','#f-author','#f-type','#f-inst'].forEach(s=>$(s).addEventListener('input', applyFilters));
+['#q','#f-author','#f-fmt','#f-pub'].forEach(s=>$(s).addEventListener('input', applyFilters));
 function applyFilters(){
   const q = $('#q').value.trim().toLowerCase();
-  const fa = $('#f-author').value, ft = $('#f-type').value, fi = $('#f-inst').value;
+  const fa = $('#f-author').value, ff = $('#f-fmt').value, fp = $('#f-pub').value;
   let rows = NEWS.filter(n=>{
     if(fa && n.author!==fa) return false;
-    if(ft && n.type!==ft) return false;
-    if(fi==='1' && !n.institution) return false;
+    if(ff && n.format!==ff) return false;
+    if(fp==='1' && tier(n)==='no') return false;
+    if(fp==='0' && tier(n)!=='no') return false;
     if(q){ const blob=(n.headline+' '+n.source+' '+n.author).toLowerCase(); if(!blob.includes(q)) return false; }
     return true;
   });
-  rows.sort((a,b)=> new Date(b.date)-new Date(a.date));
+  rows.sort((a,b)=> (b.pub||0)-(a.pub||0) || new Date(b.date)-new Date(a.date));
   $('#news-count').textContent = rows.length + ' de ' + NEWS.length;
   $('#news-list').innerHTML = newsCardsHTML(rows);
 }
@@ -419,11 +424,10 @@ function applyFilters(){
 function showBanner(sel,msg){ const b=$(sel); b.hidden=false; b.querySelector('span:last-child').textContent=msg; }
 
 async function loadCurrent(){
-  const [urg, news] = await Promise.all([ loadJSON('./data/urgencias.json'), loadJSON('./data/noticias.json') ]);
-  renderUrg(urg || {items:[]});
+  const news = await loadJSON('./data/noticias.json');
+  renderPub(news || {items:[]});
   renderNews(news || {items:[]});
-  const u = (news&&news.updated) || (urg&&urg.updated);
-  if(u && !(news&&news.sample) && !(urg&&urg.sample)) $('#updated').textContent = u;
+  if(news && news.updated && !news.sample) $('#updated').textContent = news.updated;
 }
 
 async function initHistory(){
@@ -436,19 +440,17 @@ async function initHistory(){
     return;
   }
   wrap.innerHTML = `<div class="hist-list">${weeks.map((w,i)=>
-    `<button class="hist-row" data-i="${i}"><span class="w">${esc(w.label)}</span><span class="m">${esc(w.urgencias||0)} crítica${w.urgencias===1?'':'s'} · ${esc(w.noticias||0)} noticias</span></button>`
+    `<button class="hist-row" data-i="${i}"><span class="w">${esc(w.label)}</span><span class="m">${esc(w.noticias||0)} piezas monitoreadas</span></button>`
   ).join('')}</div>`;
   wrap.querySelectorAll('.hist-row').forEach(btn=>{
     btn.onclick = async ()=>{
       const w = weeks[Number(btn.dataset.i)];
       const data = await loadJSON(`./data/history/${w.file}`);
-      const urg = ((data && data.urgencias) || []).slice();
-      const rows = ((data && data.noticias) || []).slice().sort((a,b)=> new Date(b.date)-new Date(a.date));
-      const order = {rojo:0, naranja:1};
-      urg.sort((a,b)=> (new Date(b.date)-new Date(a.date)) || (order[a.level]-order[b.level]));
+      const rows = ((data && data.noticias) || []).slice()
+        .sort((a,b)=> (b.pub||0)-(a.pub||0) || new Date(b.date)-new Date(a.date));
+      const pubs = rows.filter(n=>tier(n)!=='no').length;
       $('#hist-week-title').textContent = w.label;
-      $('#hist-week-count').textContent = urg.length + ' crítica' + (urg.length===1?'':'s') + ' · ' + rows.length + ' noticias';
-      $('#hist-urg-list').innerHTML = urg.length ? urg.map(urgCardHTML).join('') : '';
+      $('#hist-week-count').textContent = pubs + ' publicable' + (pubs===1?'':'s') + ' · ' + rows.length + ' en total';
       $('#hist-news-list').innerHTML = newsCardsHTML(rows);
       $('#hist-weeks').hidden = true;
       $('#hist-week-view').hidden = false;

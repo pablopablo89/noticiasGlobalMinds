@@ -2,12 +2,9 @@
   "start": "2026-08-22",
   "end": "2026-08-28",
   "label": "Del 22 al 28 de agosto",
-  "urgencias": [],
   "noticias": [
     {
       "author": "Yuval Noah Harari",
-      "priority": "P0",
-      "institution": false,
       "type": "Prensa",
       "sentiment": "neutral",
       "headline": "Entrevista completa a Yuval Noah Harari sobre IA, poder y democracia.",
@@ -18,8 +15,6 @@
     },
     {
       "author": "Yuval Noah Harari",
-      "priority": "P0",
-      "institution": false,
       "type": "Prensa",
       "sentiment": "neutral",
       "headline": "Harari sostiene que la IA producirá intimidad en masa y que hay hasta 2028 para fijar reglas.",
@@ -29,8 +24,6 @@
     },
     {
       "author": "Yuval Noah Harari",
-      "priority": "P0",
-      "institution": false,
       "type": "Research",
       "sentiment": "neutral",
       "headline": "\"Accionistas de nuestra obsolescencia\": ensayo en español que retoma el argumento de Harari sobre el futuro del trabajo y el capital.",
@@ -41,8 +34,6 @@
     },
     {
       "author": "Yuval Noah Harari",
-      "priority": "P0",
-      "institution": false,
       "type": "Prensa",
       "sentiment": "neutral",
       "headline": "ONGs piden audiencia pública en el Senado; el debate cita el cuestionamiento de Harari en el Financial Times sobre otorgar personería jurídica a agentes de IA.",
@@ -52,8 +43,6 @@
     },
     {
       "author": "Yuval Noah Harari",
-      "priority": "P0",
-      "institution": false,
       "type": "Prensa",
       "sentiment": "neutral",
       "headline": "Columna de opinión sobre el término \"Zionism\": cita a Harari como defensor del término pese a ser crítico del gobierno israelí actual. Tema políticamente sensible — sin acusación directa a Harari.",
@@ -64,8 +53,6 @@
     },
     {
       "author": "Patch Adams",
-      "priority": "P1",
-      "institution": false,
       "type": "Prensa",
       "sentiment": "positive",
       "headline": "Homenaje a un \"payaso de hospital\" italiano inspirado en la filosofía de Patch Adams sobre clown-terapia.",
@@ -75,8 +62,6 @@
     },
     {
       "author": "Anna Lembke",
-      "priority": "P1",
-      "institution": false,
       "type": "Prensa",
       "sentiment": "neutral",
       "headline": "Meta enfrenta un caso judicial histórico en EE.UU. por adicción a redes sociales; Lembke citada como experta en dopamina.",
@@ -86,8 +71,6 @@
     },
     {
       "author": "Anna Lembke",
-      "priority": "P1",
-      "institution": false,
       "type": "Prensa",
       "sentiment": "neutral",
       "headline": "Masud Husain, neurólogo, en La Vanguardia: \"las redes sociales afectan al sistema de dopaminas igual que cualquier otra adicción\", citando el trabajo de Anna Lembke.",
@@ -97,8 +80,6 @@
     },
     {
       "author": "Russell Barkley",
-      "priority": "P1",
-      "institution": false,
       "type": "Prensa",
       "sentiment": "positive",
       "headline": "\"¿Es el TDAH una condición médica real?\" — Barkley citado como la autoridad que respalda su legitimidad científica.",
@@ -108,8 +89,6 @@
     },
     {
       "author": "Russell Barkley",
-      "priority": "P1",
-      "institution": false,
       "type": "Prensa",
       "sentiment": "positive",
       "headline": "ADDitude Magazine cita a Russell A. Barkley como coautor de referencia en una nota sobre procrastinación y TDAH en adultos.",
@@ -119,8 +98,6 @@
     },
     {
       "author": "Ronald Siegel",
-      "priority": "P1",
-      "institution": false,
       "type": "Prensa",
       "sentiment": "positive",
       "headline": "Recomiendan el libro de mindfulness de Ronald D. Siegel para gestionar la ansiedad post-vacaciones.",
@@ -130,8 +107,6 @@
     },
     {
       "author": "Ronald Siegel",
-      "priority": "P1",
-      "institution": false,
       "type": "Prensa",
       "sentiment": "positive",
       "headline": "TN (Argentina) recomienda prácticas de mindfulness \"según Harvard\", citando a Ronald Siegel, profesor de la Facultad de Medicina de Harvard.",
@@ -142,8 +117,6 @@
     },
     {
       "author": "Ronald Siegel",
-      "priority": "P1",
-      "institution": false,
       "type": "Prensa",
       "sentiment": "positive",
       "headline": "Revista Fórum (Brasil) reseña el artículo de Harvard Health sobre mindfulness escrito junto a Ronald D. Siegel.",
@@ -153,8 +126,6 @@
     },
     {
       "author": "Suzana Herculano-Houzel",
-      "priority": "P1",
-      "institution": false,
       "type": "Evento",
       "sentiment": "positive",
       "headline": "Suzana Herculano-Houzel dicta un curso sobre el potencial del cerebro en CasaFolha.",
@@ -164,8 +135,6 @@
     },
     {
       "author": "Shauna Shapiro",
-      "priority": "P1",
-      "institution": false,
       "type": "Research",
       "sentiment": "neutral",
       "headline": "Paper académico sobre mindfulness cita el trabajo de Shauna Shapiro en escalas de compasión.",
@@ -175,8 +144,6 @@
     },
     {
       "author": "Jaime Troiano",
-      "priority": "P1",
-      "institution": false,
       "type": "Prensa",
       "sentiment": "positive",
       "headline": "Jaime Troiano anuncia en su columna de A Gazeta el lanzamiento de su nuevo libro sobre branding, previsto para el 29 de septiembre.",
@@ -187,8 +154,6 @@
     },
     {
       "author": "Cipriano Sánchez García",
-      "priority": "P0",
-      "institution": true,
       "type": "Evento",
       "sentiment": "positive",
       "headline": "Huixquilucan abre un laboratorio de 450 millones de pesos: el rector de Anáhuac señala que solo 1 de cada 10 carreras elegidas es ingeniería.",
@@ -199,8 +164,6 @@
     },
     {
       "author": "Cipriano Sánchez García",
-      "priority": "P0",
-      "institution": true,
       "type": "Prensa",
       "sentiment": "positive",
       "headline": "Entrevista de perfil: \"Formar personas antes que profesionales\" — 11 años de gestión del rector de Anáhuac México.",
@@ -211,8 +174,6 @@
     },
     {
       "author": "Cipriano Sánchez García",
-      "priority": "P0",
-      "institution": true,
       "type": "Prensa",
       "sentiment": "positive",
       "headline": "Anáhuac México encabeza la entrega del primer Padrón EGEL Plus del CENEVAL, que distingue al 9% de las universidades del país.",
@@ -222,8 +183,6 @@
     },
     {
       "author": "Cipriano Sánchez García",
-      "priority": "P0",
-      "institution": true,
       "type": "Evento",
       "sentiment": "positive",
       "headline": "\"Héroes de su propia Odisea\": el rector presentó al Dr. Jesús Villagrasa Lasaga en la bienvenida universitaria 2026.",
@@ -233,8 +192,6 @@
     },
     {
       "author": "Carlos Gadia",
-      "priority": "P1",
-      "institution": false,
       "type": "Prensa",
       "sentiment": "positive",
       "headline": "La apuesta de Maringá por la educación inclusiva llega al debate nacional, con el neuropediatra Carlos Gadia y el proyecto \"Autismo Sem Máscara\".",
@@ -245,8 +202,6 @@
     },
     {
       "author": "Suzana Herculano-Houzel",
-      "priority": "P1",
-      "institution": false,
       "type": "Research",
       "sentiment": "neutral",
       "headline": "Nature cita su investigación sobre escalado cortical y cerebelar en un paper sobre células granulares y trayectorias corticales.",
@@ -257,8 +212,6 @@
     },
     {
       "author": "Ronald Siegel",
-      "priority": "P1",
-      "institution": false,
       "type": "Prensa",
       "sentiment": "positive",
       "headline": "Revista Fórum reseña el artículo de Harvard Health sobre mindfulness que coescribió, distinguiendo mindfulness de meditación.",
@@ -268,8 +221,6 @@
     },
     {
       "author": "Ronald Siegel",
-      "priority": "P1",
-      "institution": false,
       "type": "Research",
       "sentiment": "neutral",
       "headline": "Artículo sobre psicoterapia asistida con psicodélicos lo cita: \"el sufrimiento no es el dolor en sí, sino la resistencia al dolor\".",
@@ -279,8 +230,6 @@
     },
     {
       "author": "Yuval Noah Harari",
-      "priority": "P0",
-      "institution": false,
       "type": "Prensa",
       "sentiment": "neutral",
       "headline": "Análisis sobre las smart glasses de Meta retoma su advertencia en el podcast de The Economist contra dar personería legal a sistemas de IA.",
@@ -291,8 +240,6 @@
     },
     {
       "author": "Shauna Shapiro",
-      "priority": "P1",
-      "institution": false,
       "type": "Prensa",
       "sentiment": "neutral",
       "headline": "Good Men Project la menciona entre los referentes de mindfulness con los que ha trabajado el autor de la nota.",
