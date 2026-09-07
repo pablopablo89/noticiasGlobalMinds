@@ -6,6 +6,13 @@
       "label": "Del 22 al 28 de agosto",
       "file": "2026-08-22_2026-08-28.json",
       "noticias": 26
+    },
+    {
+      "start": "2026-08-29",
+      "end": "2026-09-04",
+      "label": "Del 29 de agosto al 4 de septiembre",
+      "file": "2026-08-29_2026-09-04.json",
+      "noticias": 21
     }
   ]
 }
