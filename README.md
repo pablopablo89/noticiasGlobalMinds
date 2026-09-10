@@ -86,7 +86,7 @@ Corren en la nube de Anthropic — no requieren tener la PC encendida.
 
 | Rutina | Cuándo | Estado | Qué hace |
 |---|---|---|---|
-| Critical Watch | Lun y Mié, 08:00 (BA) | activa | Lee las alertas y actualiza el dashboard |
+| Contenido para redes | Lun y Mié, 08:00 (BA) | activa | Lee las alertas, verifica los links y actualiza el dashboard |
 | Viernes: actualizar + enviar | Vie, 08:00 (BA) | **pausada** | Actualizaba y enviaba el reporte por mail |
 | Auto-archivar alertas | Cada 4 h | activa | Etiqueta `GMP` y archiva las alertas del inbox |
 
