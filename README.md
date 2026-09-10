@@ -87,8 +87,14 @@ Corren en la nube de Anthropic — no requieren tener la PC encendida.
 | Rutina | Cuándo | Estado | Qué hace |
 |---|---|---|---|
 | Contenido para redes | Lun y Mié, 08:00 (BA) | activa | Lee las alertas, verifica los links y actualiza el dashboard |
-| Viernes: actualizar + enviar | Vie, 08:00 (BA) | **pausada** | Actualizaba y enviaba el reporte por mail |
+| Viernes: actualizar + enviar | Vie, 11:00 (BA) | activa | Actualiza el dashboard y manda el reporte semanal por mail |
 | Auto-archivar alertas | Cada 4 h | **apagada** | Reemplazada por dos filtros de Gmail (ver abajo) |
+
+**Reporte semanal por mail:** el contenido lo arma `scripts/reporte-semanal.js` a partir de
+`data/noticias.json` (solo lo publicable, `pub` ≥ 55), en el formato aprobado. El rango va del sábado
+de inicio hasta el día del envío. Se manda a fiamma.maidana@, agustina@, coqui@ y pablo.rubino@
+(todos @gruponods.com), sin copias. Si el reporte de esa semana ya se mandó a mano, la rutina no lo
+repite. Para generarlo a mano: `node scripts/reporte-semanal.js . reporte.html reporte.txt`.
 
 **Limpieza de la bandeja de entrada:** la hacen dos filtros de Gmail en pablo.rubino@gruponods.com, que actúan apenas llega cada mail. Los dos saltean la bandeja, marcan como leído y ponen la etiqueta `GMP`; ninguno borra nada.
 - `from:(alerts@talkwalker.com) -Maciel`
