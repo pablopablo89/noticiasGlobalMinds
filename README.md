@@ -101,6 +101,14 @@ item, la rutina tiene que extraer la URL real del wrapper `google.com/url?…&ur
 página y confirmar que el apellido del autor aparece en el texto. Si no aparece, se descarta.
 La fecha sale de `article:published_time` de la página, no del correo.
 
+**Importante: la verificación necesita red.** Las rutinas corren en un entorno de la nube cuyo nivel de red
+predeterminado es **Trusted**: solo deja pasar registros de paquetes y GitHub, no sitios de noticias. Con ese
+nivel la verificación es imposible (la semana del 5 al 11 de septiembre las dos corridas terminaron sin cargar
+nada por eso). Para que verifique, el entorno tiene que estar en **Network access = Full**: se cambia editando el
+entorno desde el editor de la rutina, en claude.ai/code. Si la rutina detecta que no tiene red, pasa a un
+**modo sin red**: solo acepta resultados cuyo titular nombra al autor, los marca como no verificados, les pone un
+tope de 70 y manda una notificación.
+
 ## Fuera de alcance
 
 Marcial Maciel y los Legionarios de Cristo / Regnum Christi **no se monitorean**. Fueron dados
