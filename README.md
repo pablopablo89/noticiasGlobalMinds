@@ -88,7 +88,13 @@ Corren en la nube de Anthropic — no requieren tener la PC encendida.
 |---|---|---|---|
 | Contenido para redes | Lun y Mié, 08:00 (BA) | activa | Lee las alertas, verifica los links y actualiza el dashboard |
 | Viernes: actualizar + enviar | Vie, 08:00 (BA) | **pausada** | Actualizaba y enviaba el reporte por mail |
-| Auto-archivar alertas | Cada 4 h | activa | Etiqueta `GMP` y archiva las alertas del inbox |
+| Auto-archivar alertas | Cada 4 h | **apagada** | Reemplazada por dos filtros de Gmail (ver abajo) |
+
+**Limpieza de la bandeja de entrada:** la hacen dos filtros de Gmail en pablo.rubino@gruponods.com, que actúan apenas llega cada mail. Los dos saltean la bandeja, marcan como leído y ponen la etiqueta `GMP`; ninguno borra nada.
+- `from:(alerts@talkwalker.com) -Maciel`
+- `from:(googlealerts-noreply@google.com) subject:(Harari OR "Patch Adams" OR Lembke OR … OR Cipriano) -Maciel` — filtra por los 19 autores para no tocar otras alertas de Google.
+
+Las rutinas buscan en todo el correo (`in:anywhere`), así que archivar no las afecta.
 
 La semana va de **sábado a viernes**. Las corridas suman al archivo de la semana en curso
 (dedupe por url) y la semana se cierra el lunes siguiente.
