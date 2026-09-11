@@ -4,7 +4,7 @@
     "end": "2026-09-11",
     "label": "Del 5 al 11 de septiembre"
   },
-  "updated": "10 sept 2026 · 09:20 (BA)",
+  "updated": "11 sept 2026 · 11:17 (BA)",
   "sample": false,
   "items": [
     {
@@ -171,6 +171,19 @@
       "angle": "Columna firmada por ella en el diario más grande de Brasil: contenido propio para compartir en portugués."
     },
     {
+      "author": "Anna Lembke",
+      "headline": "Entrevista propia en Pós PUCPR (Brasil): Lembke habla del «ayuno de dopamina» y los hábitos, en un material dirigido a profesionales de posgrado.",
+      "source": "Pós PUCPR Digital (Brasil)",
+      "date": "2026-09-10",
+      "url": "https://posdigital.pucpr.br/materiais-gratuitos/entrevista-anna-lembke/",
+      "type": "Prensa",
+      "sentiment": "positive",
+      "pub": 70,
+      "format": "Nota + link",
+      "angle": "Entrevista propia de una universidad brasileña de peso, en portugués, con foco práctico en hábitos y dopamina: contenido listo para compartir con la audiencia de Brasil.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
       "author": "Yuval Noah Harari",
       "headline": "Harari figura entre los oradores de Digital X 2026, en Colonia, junto a Angela Merkel, Markus Söder y Richard David Precht; el evento agotó sus 6.000 entradas.",
       "source": "Express (Alemania)",
@@ -305,6 +318,19 @@
       "angle": "Otra cobertura de prensa nacional del relevo: suma respaldo si se hace un posteo de despedida."
     },
     {
+      "author": "Yuval Noah Harari",
+      "headline": "Harari comparte cartel con la periodista Maria Ressa (Nobel de la Paz) en el evento 5x15, en Londres, para hablar del estado del mundo.",
+      "source": "Eventbrite (Reino Unido)",
+      "date": "2026-09-11",
+      "url": "https://www.eventbrite.co.uk/e/5x15-presents-yuval-noah-harari-and-maria-ressa-on-the-state-of-the-world-tickets-2000015920457",
+      "type": "Evento",
+      "sentiment": "positive",
+      "pub": 58,
+      "format": "Dato",
+      "angle": "Cruza a Harari con una Nobel de la Paz en un mismo evento: dato de agenda con peso para un posteo, aunque la fuente es una página de venta de entradas.",
+      "note": "La fuente es una página de venta de entradas (Eventbrite), no una nota periodística. Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
       "author": "Anna Lembke",
       "headline": "De Volkskrant (Países Bajos) consulta si el «detox de dopamina» sirve contra la adicción al celular, y recoge su definición del smartphone.",
       "source": "de Volkskrant (Países Bajos)",
@@ -342,6 +368,19 @@
       "format": "Nota + link",
       "angle": "Reconocimiento de una cámara empresaria: se puede citar sin que suene a autopromoción.",
       "note": "No verificado: Instagram no deja abrir el posteo de forma automática. El texto sale del fragmento de la alerta."
+    },
+    {
+      "author": "Anna Lembke",
+      "headline": "El sitio rumano The Woman confirma a Lembke en la agenda de Impact SEE'26, junto a Ryan Reynolds, como keynote de apertura en Bucarest.",
+      "source": "The Woman (Rumania)",
+      "date": "2026-09-11",
+      "url": "https://www.thewoman.ro/impact-see26-anunta-agenda-dr-anna-lembke-si-ryan-reynolds-printre-speakerii-prezenti/",
+      "type": "Evento",
+      "sentiment": "positive",
+      "pub": 55,
+      "format": "Dato",
+      "angle": "Confirma que Lembke abre la agenda de Impact SEE'26 en Bucarest junto a Ryan Reynolds: otro medio que respalda el mismo evento ya cubierto la semana pasada.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
     },
     {
       "author": "Yuval Noah Harari",
