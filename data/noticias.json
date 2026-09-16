@@ -4,9 +4,23 @@
     "end": "2026-09-18",
     "label": "Del 12 al 18 de septiembre"
   },
-  "updated": "14 sept 2026 · 08:26 (BA)",
+  "updated": "16 sept 2026 · 08:16 (BA)",
   "sample": false,
   "items": [
+    {
+      "author": "Yuval Noah Harari",
+      "headline": "Harari anuncia en X el cierre de su serie gráfica 'Sapiens: A Graphic History', que llega en noviembre.",
+      "source": "X (@harari_yuval)",
+      "date": "2026-09-14",
+      "url": "https://x.com/harari_yuval/status/2099527363356729562",
+      "type": "Social",
+      "sentiment": "positive",
+      "pub": 70,
+      "format": "Nota + link",
+      "quote": "¿Cómo transformó la curiosidad al mundo? ¿La modernidad nos hizo más felices? ¿Quién ganará la batalla por el control: los humanos o la IA?",
+      "angle": "Anuncio propio de Harari sobre el cierre de su serie de novela gráfica, con fecha de lanzamiento (3 de noviembre): gancho de producto listo para compartir.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
     {
       "author": "Yuval Noah Harari",
       "headline": "Harari, en National Geographic España: la tecnología simplificó la vida individual pero hizo mucho más compleja a la civilización.",
@@ -36,6 +50,19 @@
     },
     {
       "author": "Yuval Noah Harari",
+      "headline": "En LinkedIn circula 'Noah's Ark': Harari sostiene que sí se puede evitar una catástrofe de IA, aunque no será fácil.",
+      "source": "LinkedIn (Robin Pomeroy) / The Economist",
+      "date": "2026-09-15",
+      "url": "https://www.linkedin.com/posts/robin-pomeroy_yuval-noah-harari-responds-to-elon-musk-activity-7505154676791635969-EOue",
+      "type": "Social",
+      "sentiment": "positive",
+      "pub": 66,
+      "format": "Nota + link",
+      "angle": "Titular editorial optimista sobre su postura ante el riesgo de la IA, compartido junto a la entrevista completa con The Economist: mensaje esperanzador fácil de republicar.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Yuval Noah Harari",
       "headline": "Harari, en Gestión (Perú): en el mundo que viene, la habilidad más importante será saber decir 'no lo sé'.",
       "source": "Gestión (Perú)",
       "date": "2026-09-12",
@@ -49,6 +76,19 @@
       "note": "Sin verificar: el entorno no tenía salida a internet."
     },
     {
+      "author": "Patch Adams",
+      "headline": "El Gesundheit Institute de Patch Adams comparte en Facebook los testimonios de los participantes de 'Laughing Body 2026'.",
+      "source": "Facebook (Gesundheit Institute)",
+      "date": "2026-09-14",
+      "url": "https://www.facebook.com/realpatchadams/posts/some-warm-words-from-our-participants-at-laughing-body-2026/1741319047358299/",
+      "type": "Social",
+      "sentiment": "positive",
+      "pub": 64,
+      "format": "Nota + link",
+      "angle": "Posteo propio del instituto fundado por Patch Adams, con testimonios reales de un evento sobre 'el arte del cuidado': contenido institucional auténtico y positivo.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
       "author": "Yuval Noah Harari",
       "headline": "Pós PUCPR Digital resume en tres desafíos existenciales lo que Harari plantea sobre el futuro de la humanidad.",
       "source": "Pós PUCPR Digital (Brasil)",
@@ -59,6 +99,19 @@
       "pub": 63,
       "format": "Carrusel",
       "angle": "El blog organiza en tres desafíos existenciales las ideas de Harari sobre el futuro: la estructura de lista ya arma el carrusel.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Anna Lembke",
+      "headline": "Anna Lembke, confirmada como oradora principal de Impact SEE'26 en Bulgaria, junto a Ryan Reynolds.",
+      "source": "Boulevard Bulgaria",
+      "date": "2026-09-15",
+      "url": "https://boulevardbulgaria.bg/articles/rayan-reynolds-prof-iliyan-mihov-i-d-r-anna-lambke-ot-stanford-sa-sred-lektorite-na-impact-see-26",
+      "type": "Evento",
+      "sentiment": "positive",
+      "pub": 62,
+      "format": "Dato",
+      "angle": "Lembke abre como keynote speaker un festival internacional junto a figuras como Ryan Reynolds: prueba de su alcance más allá del ámbito académico.",
       "note": "Sin verificar: el entorno no tenía salida a internet."
     },
     {
@@ -111,6 +164,20 @@
       "pub": 58,
       "format": "Dato",
       "angle": "Sitio de opinión polaco dedica una nota entera a si la IA le quitará el poder a la humanidad, citando a Harari como referencia central: extiende su alcance a Europa del Este.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Yuval Noah Harari",
+      "headline": "«Nunca invoques un poder que no puedas controlar»: un blog dominicano recoge la advertencia de Harari sobre la IA y la democracia.",
+      "source": "RobertoCavada.com (República Dominicana)",
+      "date": "2026-09-14",
+      "url": "https://robertocavada.com/nunca-invoques-un-poder-que-no-puedas-controlar-yuval-noah-harari-sobre-como-la-ia-podria-amenazar-la-democracia-y-dividir-al-mundo/",
+      "type": "Prensa",
+      "sentiment": "neutral",
+      "pub": 58,
+      "format": "Cita",
+      "quote": "Nunca invoques un poder que no puedas controlar.",
+      "angle": "Blog en español retoma una frase contundente de Harari sobre el riesgo de la IA para la democracia: cita lista para placa con gancho fuerte.",
       "note": "Sin verificar: el entorno no tenía salida a internet."
     },
     {
@@ -188,6 +255,19 @@
       "type": "Social",
       "sentiment": "positive",
       "pub": 46,
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Yuval Noah Harari",
+      "headline": "El sitio albanés Sot.com.al analiza la idea de Harari de que los algoritmos de redes sociales tienen a todo el mundo 'excitado'.",
+      "source": "Sot.com.al (Albania)",
+      "date": "2026-09-16",
+      "url": "http://www.sot.com.al/alegoritmet-e-rrjeteve-sociale-yuval-noah-harari-e-gjithe-bota-eshte-shume-e-eksituar-i5183481",
+      "type": "Prensa",
+      "sentiment": "neutral",
+      "pub": 44,
+      "format": "Dato",
+      "angle": "Extiende el alcance de Harari a medios de Europa balcánica poco habituales, aunque como nota de opinión de bajo impacto visual.",
       "note": "Sin verificar: el entorno no tenía salida a internet."
     }
   ]
