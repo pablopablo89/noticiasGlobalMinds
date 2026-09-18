@@ -4,7 +4,7 @@
     "end": "2026-09-18",
     "label": "Del 12 al 18 de septiembre"
   },
-  "updated": "16 sept 2026 · 08:16 (BA)",
+  "updated": "18 sept 2026 · 11:11 (BA)",
   "sample": false,
   "items": [
     {
@@ -76,6 +76,19 @@
       "note": "Sin verificar: el entorno no tenía salida a internet."
     },
     {
+      "author": "Yuval Noah Harari",
+      "headline": "Harari es entrevistado en 'The Rest Is Politics' sobre la mayor amenaza que la humanidad no logra asimilar de la IA.",
+      "source": "The Rest Is Politics (alastaircampbell.org)",
+      "date": "2026-09-18",
+      "url": "https://alastaircampbell.org/2026/09/the-greatest-threat-humans-just-cant-stomach-with-yuval-noah-harari/",
+      "type": "Social",
+      "sentiment": "neutral",
+      "pub": 65,
+      "format": "Nota + link",
+      "angle": "Entrevista completa (Parte 1) a Harari en uno de los podcasts políticos más escuchados del Reino Unido: contenido de referencia para compartir con link.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
       "author": "Patch Adams",
       "headline": "El Gesundheit Institute de Patch Adams comparte en Facebook los testimonios de los participantes de 'Laughing Body 2026'.",
       "source": "Facebook (Gesundheit Institute)",
@@ -99,6 +112,19 @@
       "pub": 63,
       "format": "Carrusel",
       "angle": "El blog organiza en tres desafíos existenciales las ideas de Harari sobre el futuro: la estructura de lista ya arma el carrusel.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Yuval Noah Harari",
+      "headline": "Medio checo Lidovky anuncia la visita de Harari a Praga el 12 de octubre para la conferencia 'The Future Is Personal'.",
+      "source": "Lidovky.cz (República Checa)",
+      "date": "2026-09-17",
+      "url": "https://www.lidovky.cz/orientace/yuval-noah-harari-sapiens-globalni-celebrita-sekularni-prorok.A260916_135803_ln-orientace_lsva",
+      "type": "Evento",
+      "sentiment": "positive",
+      "pub": 63,
+      "format": "Dato",
+      "angle": "Anuncio en medio checo del evento 'The Future Is Personal' con Harari en Praga, con fecha concreta (12 de octubre): dato de agenda listo para promocionar.",
       "note": "Sin verificar: el entorno no tenía salida a internet."
     },
     {
@@ -141,6 +167,32 @@
       "note": "Sin verificar: el entorno no tenía salida a internet."
     },
     {
+      "author": "Anna Lembke",
+      "headline": "MasterClass comparte en Facebook un nuevo clip de Anna Lembke sobre cómo reconfigurar el cerebro para sentirse enfocado y motivado.",
+      "source": "Facebook (MasterClass)",
+      "date": "2026-09-17",
+      "url": "https://www.facebook.com/MasterClassOfficial/videos/beat-burnout-with-science/2123061141583081/",
+      "type": "Social",
+      "sentiment": "positive",
+      "pub": 60,
+      "format": "Video",
+      "angle": "Nuevo clip de su clase de MasterClass sobre cómo reconfigurar el cerebro para sentirse enfocado y motivado: contenido pedagógico propio en formato video.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Yuval Noah Harari",
+      "headline": "La Gaceta (Tucumán) compara a Harari con Elon Musk como referentes del debate sobre la IA y el futuro que viene.",
+      "source": "La Gaceta (Argentina)",
+      "date": "2026-09-16",
+      "url": "https://www.lagaceta.com.ar/nota/1153985/opinion/musk-harari-ia-mundo-viene.html",
+      "type": "Prensa",
+      "sentiment": "neutral",
+      "pub": 60,
+      "format": "Nota + link",
+      "angle": "Columna de opinión en español (Argentina) que pone a Harari junto a Musk como referentes del debate sobre el futuro y la IA: extiende su presencia en medios de opinión regionales.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
       "author": "Russell Barkley",
       "headline": "Un episodio de podcast en Spotify está dedicado a Russell Barkley y sus ideas sobre funciones ejecutivas y TDAH en adultos.",
       "source": "Spotify",
@@ -178,6 +230,32 @@
       "format": "Cita",
       "quote": "Nunca invoques un poder que no puedas controlar.",
       "angle": "Blog en español retoma una frase contundente de Harari sobre el riesgo de la IA para la democracia: cita lista para placa con gancho fuerte.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Jose Goldemberg",
+      "headline": "Goldemberg firma junto a Cristiane Cortez una columna en Fecomercio sobre los riesgos de negocio que exige El Niño.",
+      "source": "Fecomercio (Brasil)",
+      "date": "2026-09-16",
+      "url": "https://www.fecomercio.com.br/noticia/el-nino-exige-um-novo-olhar-sobre-os-riscos-do-negocio",
+      "type": "Prensa",
+      "sentiment": "neutral",
+      "pub": 58,
+      "format": "Nota + link",
+      "angle": "Columna firmada por Goldemberg (junto a Cristiane Cortez) sobre los riesgos climáticos de El Niño para los negocios: contenido propio y de actualidad en su área de expertise.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Yuval Noah Harari",
+      "headline": "ARD Mediathek entrevista a Harari en el programa 'Team Timster': ¿puede la inteligencia artificial salvar al mundo?",
+      "source": "ARD Mediathek (Alemania)",
+      "date": "2026-09-16",
+      "url": "https://www.ardmediathek.de/video/team-timster/harari-kann-ki-die-welt-retten/kika/Y3JpZDovL2tpa2EuZGUvYmVpdHJhZy9jbXMvMzI5NTNhYzktYTNlNC00MTNkLWFiYTYtMDA0OTAyZjk3NTVj?isChildContent",
+      "type": "Prensa",
+      "sentiment": "neutral",
+      "pub": 58,
+      "format": "Video",
+      "angle": "Entrevista en video con Harari en la TV pública alemana sobre si la IA puede 'salvar al mundo': contenido audiovisual con gancho fuerte para el título.",
       "note": "Sin verificar: el entorno no tenía salida a internet."
     },
     {
@@ -247,6 +325,19 @@
       "note": "Sin verificar: el entorno no tenía salida a internet."
     },
     {
+      "author": "Anna Lembke",
+      "headline": "Blog de reseñas Make Headway analiza el argumento central de 'Dopamine Nation', el libro de Anna Lembke.",
+      "source": "Make Headway (makeheadway.com)",
+      "date": "2026-09-17",
+      "url": "https://makeheadway.com/blog/dopamine-nation/",
+      "type": "Prensa",
+      "sentiment": "positive",
+      "pub": 52,
+      "format": "Dato",
+      "angle": "Blog de reseñas de libros analiza en detalle el argumento central de 'Dopamine Nation': nota de referencia sobre el libro con enfoque didáctico.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
       "author": "Yuval Noah Harari",
       "headline": "Una cuenta de Instagram sobre libros (La Veu dels Llibres) recomienda 'Nexus' de Harari.",
       "source": "Instagram (La Veu dels Llibres)",
@@ -255,6 +346,19 @@
       "type": "Social",
       "sentiment": "positive",
       "pub": 46,
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Patch Adams",
+      "headline": "Un grupo comunitario en Facebook reparte remeras de 'Puppets Up' para coordinadores del Patch Adams Institute en Nápoles.",
+      "source": "Facebook (grupo comunitario)",
+      "date": "2026-09-16",
+      "url": "https://www.facebook.com/groups/mississippimillsfriends/posts/2403977086677151/",
+      "type": "Social",
+      "sentiment": "positive",
+      "pub": 45,
+      "format": "Nota + link",
+      "angle": "Publicación de un grupo comunitario sobre una iniciativa solidaria del Patch Adams Institute en Nápoles: contenido humano y positivo, aunque de alcance acotado.",
       "note": "Sin verificar: el entorno no tenía salida a internet."
     },
     {
