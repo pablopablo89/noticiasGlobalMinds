@@ -4,9 +4,48 @@
     "end": "2026-09-25",
     "label": "Del 19 al 25 de septiembre"
   },
-  "updated": "21 sept 2026 · 08:26 (BA)",
+  "updated": "23 sept 2026 · 08:17 (BA)",
   "sample": false,
   "items": [
+    {
+      "author": "Jaime Troiano",
+      "headline": "Troiano lanza su nuevo libro \"A Potência das Marcas\", sobre el rol de las marcas en tiempos de cambio social.",
+      "source": "Grandes Nomes da Propaganda (Brasil)",
+      "date": "2026-09-22",
+      "url": "https://grandesnomesdapropaganda.com.br/mercado/novo-livro-de-jaime-troiano-debate-marcas-em-meio-as-mudancas-sociais/",
+      "type": "Prensa",
+      "sentiment": "positive",
+      "pub": 68,
+      "format": "Nota + link",
+      "angle": "Lanzamiento de libro propio: la nota ya trae el gancho (nuevo título, tema y sus 28 años al frente de Troiano Branding) listo para un posteo de anuncio editorial.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Carlos Gadia",
+      "headline": "El neurólogo Carlos Gadia comparte en Instagram cómo aborda el diagnóstico de autismo tras 30 años de consultorio.",
+      "source": "Instagram",
+      "date": "2026-09-21",
+      "url": "https://www.instagram.com/reel/DdfcfHetgVi/",
+      "type": "Social",
+      "sentiment": "positive",
+      "pub": 67,
+      "format": "Reel",
+      "angle": "Posteo propio en primera persona explicando su método diagnóstico: contenido listo para republicar como reel educativo.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Yuval Noah Harari",
+      "headline": "Harari dará una conferencia en Praga y el medio checo iDNES.cz sortea entradas VIP para el evento.",
+      "source": "iDNES.cz (República Checa)",
+      "date": "2026-09-22",
+      "url": "https://www.idnes.cz/premium/sluzby/harari-in-prague-vip-vstupenky-soutez.A260918_121122_premium-sluzby_bhar",
+      "type": "Evento",
+      "sentiment": "positive",
+      "pub": 63,
+      "format": "Nota + link",
+      "angle": "Evento con fecha y sorteo de entradas VIP: permite anticipar la agenda del autor y sumar un llamado a la acción (participar del sorteo).",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
     {
       "author": "Suzana Herculano-Houzel",
       "headline": "En su columna semanal de Folha de S.Paulo, la neurocientífica sostiene que la inteligencia artificial es una herramienta útil solo para quien sabe usarla.",
@@ -18,6 +57,19 @@
       "pub": 62,
       "format": "Nota + link",
       "angle": "Columna propia y firmada en uno de los diarios más grandes de Brasil, con un enfoque directo (la IA como herramienta) fácil de convertir en un posteo de opinión de la autora.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Yuval Noah Harari",
+      "headline": "Un posteo de LinkedIn difunde la conversación \"The Greatest Threat Humans Just Can't Stomach\", con Harari hablando sobre los riesgos de la IA.",
+      "source": "LinkedIn (Sergio Duchini)",
+      "date": "2026-09-22",
+      "url": "https://www.linkedin.com/posts/sergioduchini_the-greatest-threat-humans-just-cant-stomach-activity-7507257750956105728-X0NH",
+      "type": "Social",
+      "sentiment": "positive",
+      "pub": 55,
+      "format": "Video",
+      "angle": "Charla en video sobre IA con Harari como protagonista: material audiovisual listo para recortar en un reel.",
       "note": "Sin verificar: el entorno no tenía salida a internet."
     },
     {
