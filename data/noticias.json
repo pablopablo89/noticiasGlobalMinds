@@ -4,9 +4,37 @@
     "end": "2026-09-25",
     "label": "Del 19 al 25 de septiembre"
   },
-  "updated": "23 sept 2026 · 08:17 (BA)",
+  "updated": "25 sept 2026 · 17:40 (BA)",
   "sample": false,
   "items": [
+    {
+      "author": "Yuval Noah Harari",
+      "headline": "Un video de Educación Continua UEES usa una pregunta de Yuval Noah Harari sobre la IA como gancho para promocionar el Global Minds Program en IA y Negocios.",
+      "source": "Facebook (Educación Continua UEES)",
+      "date": "2026-09-23",
+      "url": "https://www.facebook.com/EducacionContinuaUEES/videos/conoce-más/1383368510579253/",
+      "type": "Social",
+      "sentiment": "positive",
+      "pub": 85,
+      "format": "Cita",
+      "angle": "Contenido propio del ecosistema Global Minds: usa una pregunta de Harari sobre la IA como gancho para promocionar el programa Global Minds en IA y Negocios, listo para reutilizar tal cual.",
+      "quote": "¿Qué pasa cuando aparece alguien mejor que nosotros?",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Patch Adams",
+      "headline": "Educación Continua UEES cita a Patch Adams sobre la humanización de la medicina para promocionar el Global Mind Program en Salud 4.0.",
+      "source": "Facebook (Educación Continua UEES)",
+      "date": "2026-09-24",
+      "url": "https://www.facebook.com/EducacionContinuaUEES/videos/-inscríbete-ahora/1837363374104286/",
+      "type": "Social",
+      "sentiment": "positive",
+      "pub": 85,
+      "format": "Cita",
+      "angle": "Contenido propio del ecosistema Global Minds: la frase de Patch Adams sobre humanidad y tecnología es el gancho promocional del programa Salud 4.0, listo para reutilizar en redes.",
+      "quote": "Patch Adams nos recuerda que la medicina del futuro no solo necesita tecnología, necesita humanidad.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
     {
       "author": "Jaime Troiano",
       "headline": "Troiano lanza su nuevo libro \"A Potência das Marcas\", sobre el rol de las marcas en tiempos de cambio social.",
@@ -18,6 +46,19 @@
       "pub": 68,
       "format": "Nota + link",
       "angle": "Lanzamiento de libro propio: la nota ya trae el gancho (nuevo título, tema y sus 28 años al frente de Troiano Branding) listo para un posteo de anuncio editorial.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Jaime Troiano",
+      "headline": "Propmark cubre el lanzamiento del libro \"A Potência das Marcas\" de Jaime Troiano en San Pablo.",
+      "source": "Propmark (Brasil)",
+      "date": "2026-09-23",
+      "url": "https://propmark.com.br/uncategorized/jaime-troiano-lanca-o-livro-a-potencia-das-marcas-em-sao-paulo/",
+      "type": "Prensa",
+      "sentiment": "positive",
+      "pub": 68,
+      "format": "Nota + link",
+      "angle": "Cobertura del lanzamiento del libro en un medio de referencia de la industria publicitaria brasileña, que refuerza el anuncio editorial con una fuente de alto prestigio.",
       "note": "Sin verificar: el entorno no tenía salida a internet."
     },
     {
@@ -48,6 +89,19 @@
     },
     {
       "author": "Suzana Herculano-Houzel",
+      "headline": "En su columna de Folha de S.Paulo, la neurocientífica explica cómo la Fórmula 1 llega a correr más rápido que las señales nerviosas del cuerpo humano.",
+      "source": "Folha de S.Paulo (Brasil)",
+      "date": "2026-09-25",
+      "url": "https://www1.folha.uol.com.br/colunas/suzanaherculanohouzel/2026/09/como-pode-a-formula-1-correr-mais-rapido-do-que-os-sinais-nos-nervos.shtml",
+      "type": "Prensa",
+      "sentiment": "positive",
+      "pub": 63,
+      "format": "Dato",
+      "angle": "Columna propia y firmada con un dato curioso y visual (velocidad de la F1 vs. velocidad de los nervios humanos), fácil de convertir en una pieza de dato o infografía.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Suzana Herculano-Houzel",
       "headline": "En su columna semanal de Folha de S.Paulo, la neurocientífica sostiene que la inteligencia artificial es una herramienta útil solo para quien sabe usarla.",
       "source": "Folha de S.Paulo (Brasil)",
       "date": "2026-09-17",
@@ -57,6 +111,58 @@
       "pub": 62,
       "format": "Nota + link",
       "angle": "Columna propia y firmada en uno de los diarios más grandes de Brasil, con un enfoque directo (la IA como herramienta) fácil de convertir en un posteo de opinión de la autora.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Yuval Noah Harari",
+      "headline": "Rappler confirma a Yuval Noah Harari entre los oradores del Social Good Summit 2026, con una conversación grabada sobre el futuro de la IA.",
+      "source": "Rappler (Filipinas)",
+      "date": "2026-09-25",
+      "url": "https://www.rappler.com/moveph/social-good-summit-2026-program-speakers-masterclasses/",
+      "type": "Evento",
+      "sentiment": "positive",
+      "pub": 60,
+      "format": "Nota + link",
+      "angle": "Confirmación de participación en un evento internacional de alto perfil con fecha y eje temático de IA, útil para anticipar agenda del autor.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Anna Lembke",
+      "headline": "Libertatea confirma a Anna Lembke como oradora principal, junto a Ryan Reynolds y David Popovici, en el evento Impact SEE'26 de Bucarest.",
+      "source": "Libertatea (Rumania)",
+      "date": "2026-09-25",
+      "url": "https://www.libertatea.ro/stiri/ryan-reynolds-dr-anna-lembke-si-david-popovici-vorbitori-de-top-la-impact-see26-219mjb6",
+      "type": "Evento",
+      "sentiment": "positive",
+      "pub": 60,
+      "format": "Nota + link",
+      "angle": "Confirmación de keynote en un evento internacional junto a figuras de alto perfil como Ryan Reynolds, ideal para anticipar agenda y destacar la compañía de speakers.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Yuval Noah Harari",
+      "headline": "Harari publica en X sobre la confianza como base de las sociedades, en referencia a su entrevista con The Economist.",
+      "source": "X (@harari_yuval)",
+      "date": "2026-09-25",
+      "url": "https://x.com/harari_yuval/status/2103166347173679463",
+      "type": "Social",
+      "sentiment": "positive",
+      "pub": 58,
+      "format": "Cita",
+      "angle": "Posteo propio del autor en X sobre confianza y sociedad: contenido breve y citable, ideal para una tarjeta de cita.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Jose Goldemberg",
+      "headline": "FecomercioSP publica un perfil sobre las \"muchas batallas\" de José Goldemberg y su rol en la cumbre Rio-92.",
+      "source": "FecomercioSP (Brasil)",
+      "date": "2026-09-23",
+      "url": "https://www.fecomercio.com.br/noticia/as-muitas-batalhas-de-jose-goldemberg",
+      "type": "Prensa",
+      "sentiment": "positive",
+      "pub": 58,
+      "format": "Nota + link",
+      "angle": "Perfil de trayectoria que repasa el rol histórico de Goldemberg en la cumbre Rio-92, buen material para una pieza de reconocimiento o legado.",
       "note": "Sin verificar: el entorno no tenía salida a internet."
     },
     {
@@ -74,6 +180,29 @@
     },
     {
       "author": "Russell Barkley",
+      "headline": "Un posteo de Instagram cita a Russell Barkley para explicar que el TDAH no es un trastorno de la atención.",
+      "source": "Instagram",
+      "date": "2026-09-25",
+      "url": "https://www.instagram.com/p/DdssnTcAOse/",
+      "type": "Social",
+      "sentiment": "positive",
+      "pub": 50,
+      "quote": "ADHD is not a disorder of attention.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Yuval Noah Harari",
+      "headline": "Sapienship, la organización cofundada por Harari, publica en LinkedIn una reflexión sobre si las herramientas de IA nos están haciendo peores en lo que más necesitamos.",
+      "source": "LinkedIn (Sapienship)",
+      "date": "2026-09-25",
+      "url": "https://www.linkedin.com/posts/sapienship_criticalthinking-democracy-aiandpolitics-activity-7508924301027377153-hU4Z",
+      "type": "Social",
+      "sentiment": "positive",
+      "pub": 50,
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Russell Barkley",
       "headline": "Una página de Facebook dedicada al TDAH cita a Russell Barkley para explicar que el TDAH puede causar el Trastorno Oposicionista Desafiante (TOD).",
       "source": "Facebook (Método Consciencia TDAH)",
       "date": "2026-09-20",
@@ -82,6 +211,28 @@
       "sentiment": "positive",
       "pub": 48,
       "quote": "Según Russell Barkley, el TDAH causa el TOD (Trastorno Oposicionista Desafiante), y es parte del TDAH.",
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Russell Barkley",
+      "headline": "Un reel de Instagram sobre Russell Barkley explica cómo la vergüenza reconfigura el cerebro en personas con TDAH.",
+      "source": "Instagram",
+      "date": "2026-09-24",
+      "url": "https://www.instagram.com/reel/DdmnfqbS3lS/",
+      "type": "Social",
+      "sentiment": "positive",
+      "pub": 48,
+      "note": "Sin verificar: el entorno no tenía salida a internet."
+    },
+    {
+      "author": "Thiago Viola",
+      "headline": "Thiago Viola comparte en LinkedIn el triple premio recibido por Microsoft.",
+      "source": "LinkedIn",
+      "date": "2026-09-25",
+      "url": "https://pt.linkedin.com/posts/thiagoviola_prêmio-triplo-para-a-microsoft-no-activity-7509012542598328320-BuOB",
+      "type": "Social",
+      "sentiment": "positive",
+      "pub": 45,
       "note": "Sin verificar: el entorno no tenía salida a internet."
     },
     {
